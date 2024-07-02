@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link href="resources/ol-geocoder.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <style>
+        html, body {
+            background-color: #ffffff;
+        }
+        .ol-control > * {
+            background-color: #f8f8f8!important;
+            color: #000000!important;
+            border-radius: 0px;
+        }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
+            color: #000000!important;
+        }
+        .search-layer-input-search {
+            background-color: #f8f8f8!important;
+        }
+        .ol-control > *:focus, .ol-control >*:hover {
+            background-color: rgba(248, 248, 248, 0.7)!important;
+        } 
+        .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 2px !important;
+        } 
+        </style>
+
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title>Cadastro de Logradouros SEDUR-PMC</title>
+    </head>
+    <body>
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources/qgis2web_expressions.js"></script>
+        <script src="resources/polyfills.js"></script>
+        <script src="./resources/functions.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="./resources/ol-layerswitcher.js"></script>
+        <script src="resources/ol-geocoder.js"></script>
+        <script src="layers/Trecho_Massa_DaguaConder2010_4.js"></script><script src="layers/Massa_DaguaConder2010_5.js"></script><script src="layers/INCRAAssentRuraismaio2021_6.js"></script><script src="layers/Paradasdenibusemrodovias2022_7.js"></script><script src="layers/PassarelasemRodovias_8.js"></script><script src="layers/EquipPubEsportejan23_9.js"></script><script src="layers/EquipPubPraasParquesoutrosjan23_10.js"></script><script src="layers/EquipPubCulturaisout21_11.js"></script><script src="layers/EquipPubAssistSocialout22_12.js"></script><script src="layers/EquipEducaoout22_13.js"></script><script src="layers/EquipPubSadeout22_14.js"></script><script src="layers/ProjetosREFLORACamaari2023_15.js"></script><script src="layers/PraasdePedgiorodestaduais_16.js"></script><script src="layers/LinhaFrreaFCA_17.js"></script><script src="layers/EixosRodEstSEINFRABa2021_18.js"></script><script src="layers/LogradourosOficializadoseouCepeados_19.js"></script><script src="layers/Localidadesdiversas2023_20.js"></script><script src="layers/Bairros2022vigente_21.js"></script><script src="layers/DistritosMunicipais2020_22.js"></script><script src="layers/LimitesMunicipais2020_23.js"></script><script src="layers/LimitesMunicpiosRMS2020_24.js"></script>
+        <script src="styles/Trecho_Massa_DaguaConder2010_4_style.js"></script><script src="styles/Massa_DaguaConder2010_5_style.js"></script><script src="styles/INCRAAssentRuraismaio2021_6_style.js"></script><script src="styles/Paradasdenibusemrodovias2022_7_style.js"></script><script src="styles/PassarelasemRodovias_8_style.js"></script><script src="styles/EquipPubEsportejan23_9_style.js"></script><script src="styles/EquipPubPraasParquesoutrosjan23_10_style.js"></script><script src="styles/EquipPubCulturaisout21_11_style.js"></script><script src="styles/EquipPubAssistSocialout22_12_style.js"></script><script src="styles/EquipEducaoout22_13_style.js"></script><script src="styles/EquipPubSadeout22_14_style.js"></script><script src="styles/ProjetosREFLORACamaari2023_15_style.js"></script><script src="styles/PraasdePedgiorodestaduais_16_style.js"></script><script src="styles/LinhaFrreaFCA_17_style.js"></script><script src="styles/EixosRodEstSEINFRABa2021_18_style.js"></script><script src="styles/LogradourosOficializadoseouCepeados_19_style.js"></script><script src="styles/Localidadesdiversas2023_20_style.js"></script><script src="styles/Bairros2022vigente_21_style.js"></script><script src="styles/DistritosMunicipais2020_22_style.js"></script><script src="styles/LimitesMunicipais2020_23_style.js"></script><script src="styles/LimitesMunicpiosRMS2020_24_style.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/Autolinker.min.js"></script>
+        <script src="./resources/qgis2web.js"></script>
+    </body>
+</html>
