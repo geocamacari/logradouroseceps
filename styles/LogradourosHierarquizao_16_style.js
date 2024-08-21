@@ -29,7 +29,7 @@ case 'sistema viário urbano complementar':
                     break;
 case 'outras vias':
                     return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(255,255,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 4.028}),
+        stroke: new ol.style.Stroke({color: 'rgba(255,255,0,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 3.268}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
@@ -37,7 +37,7 @@ case 'outras vias':
                     break;
 case 'Estradas e vias rurais':
                     return [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(1,255,5,1.0)', lineDash: [16.112,8.056], lineCap: 'square', lineJoin: 'bevel', width: 4.028}),
+        stroke: new ol.style.Stroke({color: 'rgba(1,255,5,1.0)', lineDash: [13.072,6.536], lineCap: 'square', lineJoin: 'bevel', width: 3.268}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
