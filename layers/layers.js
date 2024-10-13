@@ -255,7 +255,7 @@ maxResolution:56.00893230452392,
 
                 style: style_PraasdePedgiorodestaduais_15,
                 popuplayertitle: "Praças de Pedágio (rod. estaduais)",
-                interactive: false,
+                interactive: true,
                 title: '<img src="styles/legend/PraasdePedgiorodestaduais_15.png" /> Praças de Pedágio (rod. estaduais)'
             });
 var format_LogradourosHierarquizao_16 = new ol.format.GeoJSON();
@@ -275,10 +275,10 @@ maxResolution:11.201786460904787,
                 popuplayertitle: "Logradouros Hierarquização",
                 interactive: true,
     title: 'Logradouros Hierarquização<br />\
-    <img src="styles/legend/LogradourosHierarquizao_16_0.png" /> via expressa<br />\
-    <img src="styles/legend/LogradourosHierarquizao_16_1.png" /> sistema viário urbano principal<br />\
-    <img src="styles/legend/LogradourosHierarquizao_16_2.png" /> sistema viário urbano complementar<br />\
-    <img src="styles/legend/LogradourosHierarquizao_16_3.png" /> outras vias<br />\
+    <img src="styles/legend/LogradourosHierarquizao_16_0.png" /> Via Expressas<br />\
+    <img src="styles/legend/LogradourosHierarquizao_16_1.png" /> Sist. Viário Urb. Principal (Arteriais)<br />\
+    <img src="styles/legend/LogradourosHierarquizao_16_2.png" /> Sist. Viário Urb. Complementar (Coletoras)<br />\
+    <img src="styles/legend/LogradourosHierarquizao_16_3.png" /> Outras vias urbanas (Vias Locais)<br />\
     <img src="styles/legend/LogradourosHierarquizao_16_4.png" /> Estradas e vias rurais<br />'
         });
 var format_LogradourosOficializadoseouCepeados_17 = new ol.format.GeoJSON();
@@ -368,7 +368,7 @@ maxResolution:21.003349614196473,
 
                 style: style_Paradasdenibusemrodovias2022_21,
                 popuplayertitle: "Paradas de ônibus em rodovias (2022)",
-                interactive: false,
+                interactive: true,
                 title: '<img src="styles/legend/Paradasdenibusemrodovias2022_21.png" /> Paradas de ônibus em rodovias (2022)'
             });
 var format_Localidadesdiversas2023_22 = new ol.format.GeoJSON();
@@ -495,9 +495,9 @@ lyr_EquipPubCulturaisout21_11.set('fieldLabels', {'id': 'inline label - always v
 lyr_EquipEducaoout23_12.set('fieldLabels', {'id': 'inline label - always visible', 'tipo': 'inline label - always visible', 'cod_inep': 'hidden field', 'nome_compl': 'inline label - always visible', 'distrito': 'hidden field', 'numero': 'hidden field', 'bairro': 'hidden field', 'nome_anter': 'hidden field', 'salas': 'hidden field', 'endereco': 'hidden field', 'turmas_exi': 'hidden field', 'gestão': 'inline label - always visible', 'org.': 'hidden field', 'LINK': 'hidden field', 'Obs.': 'hidden field', });
 lyr_EquipPubSadeout23_13.set('fieldLabels', {'id': 'inline label - always visible', 'name': 'inline label - always visible', 'descriptio': 'inline label - always visible', 'tipo': 'inline label - always visible', 'fonte': 'hidden field', 'bairro': 'hidden field', 'distrito': 'hidden field', 'cnes': 'hidden field', 'n. gestão': 'inline label - always visible', 'org.': 'hidden field', 'LINK': 'hidden field', 'LINK_2': 'hidden field', });
 lyr_ProjetosREFLORACamaari2023_14.set('fieldLabels', {'Long': 'hidden field', 'Lat': 'hidden field', 'Tipo': 'inline label - always visible', 'Projeto': 'inline label - always visible', });
-lyr_PraasdePedgiorodestaduais_15.set('fieldLabels', {'id': 'no label', 'nome': 'no label', 'tipo': 'no label', 'bairro': 'no label', 'distrito': 'no label', 'base': 'no label', 'fonte': 'no label', });
-lyr_LogradourosHierarquizao_16.set('fieldLabels', {'id': 'hidden field', 'codlog_': 'inline label - always visible', 'logradour_': 'inline label - always visible', 'parcelame_': 'hidden field', 'bairro_': 'inline label - always visible', 'distrito_': 'inline label - always visible', 'cep_': 'inline label - always visible', 'obs_1': 'inline label - always visible', 'obs_2': 'inline label - always visible', 'catalogo_': 'inline label - always visible', 'webmap': 'hidden field', 'compriment': 'inline label - always visible', 'MAPA': 'inline label - always visible', });
-lyr_LogradourosOficializadoseouCepeados_17.set('fieldLabels', {'id': 'hidden field', 'codlog_': 'inline label - always visible', 'logradour_': 'inline label - always visible', 'parcelame_': 'hidden field', 'bairro_': 'inline label - always visible', 'distrito_': 'inline label - always visible', 'cep_': 'inline label - always visible', 'obs_1': 'inline label - always visible', 'obs_2': 'inline label - always visible', 'catalogo_': 'inline label - always visible', 'webmap': 'hidden field', 'compriment': 'inline label - always visible', 'MAPA': 'inline label - always visible', });
+lyr_PraasdePedgiorodestaduais_15.set('fieldLabels', {'id': 'hidden field', 'nome': 'inline label - always visible', 'tipo': 'inline label - always visible', 'bairro': 'inline label - always visible', 'distrito': 'inline label - always visible', 'base': 'inline label - always visible', 'fonte': 'inline label - always visible', });
+lyr_LogradourosHierarquizao_16.set('fieldLabels', {'id': 'hidden field', 'codlog_': 'inline label - always visible', 'logradour_': 'inline label - always visible', 'parcelame_': 'hidden field', 'bairro_': 'inline label - always visible', 'distrito_': 'inline label - always visible', 'cep_': 'inline label - always visible', 'obs_1': 'inline label - always visible', 'obs_2': 'inline label - always visible', 'catalogo_': 'inline label - always visible', 'webmap': 'inline label - always visible', 'compriment': 'inline label - always visible', 'MAPA': 'inline label - always visible', });
+lyr_LogradourosOficializadoseouCepeados_17.set('fieldLabels', {'id': 'hidden field', 'codlog_': 'inline label - always visible', 'logradour_': 'inline label - always visible', 'parcelame_': 'hidden field', 'bairro_': 'inline label - always visible', 'distrito_': 'inline label - always visible', 'cep_': 'inline label - always visible', 'obs_1': 'inline label - always visible', 'obs_2': 'inline label - always visible', 'catalogo_': 'inline label - always visible', 'webmap': 'inline label - always visible', 'compriment': 'inline label - always visible', 'MAPA': 'inline label - always visible', });
 lyr_LinhaFrreaFCA_18.set('fieldLabels', {'id': 'inline label - always visible', 'nome': 'inline label - always visible', 'nomeabrev': 'inline label - always visible', 'geometriaa': 'inline label - always visible', 'codtrechof': 'inline label - always visible', 'posicaorel': 'inline label - always visible', 'tipotrecho': 'inline label - always visible', 'bitola': 'inline label - always visible', 'eletrifica': 'inline label - always visible', 'nrlinhas': 'inline label - always visible', 'emarruamen': 'inline label - always visible', 'jurisdicao': 'inline label - always visible', 'administra': 'inline label - always visible', 'concession': 'inline label - always visible', 'operaciona': 'inline label - always visible', 'situacaofi': 'inline label - always visible', 'cargasupor': 'inline label - always visible', });
 lyr_EixosRodEstSEINFRABa2021_19.set('fieldLabels', {'Name': 'inline label - always visible', 'fid': 'inline label - always visible', 'Codigo SRE': 'inline label - always visible', 'UF': 'inline label - always visible', 'Rodovia': 'inline label - always visible', 'Local Iní': 'inline label - always visible', 'Km Inicial': 'inline label - always visible', 'Km Final': 'inline label - always visible', 'Extensão': 'inline label - always visible', 'Situação': 'inline label - always visible', 'Descriçã': 'inline label - always visible', 'Tipo de Re': 'inline label - always visible', 'Descriç_1': 'inline label - always visible', 'Coincide_3': 'inline label - always visible', 'Identifica': 'inline label - always visible', 'Extensã_1': 'inline label - always visible', 'Status': 'inline label - always visible', });
 lyr_PassarelasemRodovias_20.set('fieldLabels', {'id': 'no label', 'Layer': 'no label', 'Numero': 'no label', 'Rodovia': 'no label', 'Gestao': 'no label', 'Bairro': 'no label', 'Distrito': 'no label', });
