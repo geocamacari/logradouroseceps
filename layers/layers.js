@@ -132,113 +132,113 @@ maxResolution:140.0223307613098,
                 interactive: true,
                 title: '<img src="styles/legend/Massa_DaguaConder2010_8.png" /> Massa_Dagua (Conder 2010)'
             });
-var format_EquipPubEsportejan23_9 = new ol.format.GeoJSON();
-var features_EquipPubEsportejan23_9 = format_EquipPubEsportejan23_9.readFeatures(json_EquipPubEsportejan23_9, 
+var format_OutrosEquipInstitucionaiseComerciais2025_9 = new ol.format.GeoJSON();
+var features_OutrosEquipInstitucionaiseComerciais2025_9 = format_OutrosEquipInstitucionaiseComerciais2025_9.readFeatures(json_OutrosEquipInstitucionaiseComerciais2025_9, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_EquipPubEsportejan23_9 = new ol.source.Vector({
+var jsonSource_OutrosEquipInstitucionaiseComerciais2025_9 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_EquipPubEsportejan23_9.addFeatures(features_EquipPubEsportejan23_9);
-var lyr_EquipPubEsportejan23_9 = new ol.layer.Vector({
+jsonSource_OutrosEquipInstitucionaiseComerciais2025_9.addFeatures(features_OutrosEquipInstitucionaiseComerciais2025_9);
+var lyr_OutrosEquipInstitucionaiseComerciais2025_9 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_EquipPubEsportejan23_9,
+                source:jsonSource_OutrosEquipInstitucionaiseComerciais2025_9,
 maxResolution:7.00111653806549,
  minResolution:0.28004466152261964,
 
-                style: style_EquipPubEsportejan23_9,
+                style: style_OutrosEquipInstitucionaiseComerciais2025_9,
+                popuplayertitle: "Outros Equip. Institucionais e Comerciais (2025)",
+                interactive: true,
+                title: '<img src="styles/legend/OutrosEquipInstitucionaiseComerciais2025_9.png" /> Outros Equip. Institucionais e Comerciais (2025)'
+            });
+var format_EquipPubEsportejan23_10 = new ol.format.GeoJSON();
+var features_EquipPubEsportejan23_10 = format_EquipPubEsportejan23_10.readFeatures(json_EquipPubEsportejan23_10, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_EquipPubEsportejan23_10 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_EquipPubEsportejan23_10.addFeatures(features_EquipPubEsportejan23_10);
+var lyr_EquipPubEsportejan23_10 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_EquipPubEsportejan23_10,
+maxResolution:7.00111653806549,
+ minResolution:0.28004466152261964,
+
+                style: style_EquipPubEsportejan23_10,
                 popuplayertitle: "Equip. Pub. Esporte (jan/23)",
                 interactive: true,
-                title: '<img src="styles/legend/EquipPubEsportejan23_9.png" /> Equip. Pub. Esporte (jan/23)'
+                title: '<img src="styles/legend/EquipPubEsportejan23_10.png" /> Equip. Pub. Esporte (jan/23)'
             });
-var format_EquipPubPraasParquesoutrosjan23_10 = new ol.format.GeoJSON();
-var features_EquipPubPraasParquesoutrosjan23_10 = format_EquipPubPraasParquesoutrosjan23_10.readFeatures(json_EquipPubPraasParquesoutrosjan23_10, 
+var format_EquipPubPraasParquesoutrosjan23_11 = new ol.format.GeoJSON();
+var features_EquipPubPraasParquesoutrosjan23_11 = format_EquipPubPraasParquesoutrosjan23_11.readFeatures(json_EquipPubPraasParquesoutrosjan23_11, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_EquipPubPraasParquesoutrosjan23_10 = new ol.source.Vector({
+var jsonSource_EquipPubPraasParquesoutrosjan23_11 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_EquipPubPraasParquesoutrosjan23_10.addFeatures(features_EquipPubPraasParquesoutrosjan23_10);
-var lyr_EquipPubPraasParquesoutrosjan23_10 = new ol.layer.Vector({
+jsonSource_EquipPubPraasParquesoutrosjan23_11.addFeatures(features_EquipPubPraasParquesoutrosjan23_11);
+var lyr_EquipPubPraasParquesoutrosjan23_11 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_EquipPubPraasParquesoutrosjan23_10,
+                source:jsonSource_EquipPubPraasParquesoutrosjan23_11,
 maxResolution:7.00111653806549,
  minResolution:0.28004466152261964,
 
-                style: style_EquipPubPraasParquesoutrosjan23_10,
+                style: style_EquipPubPraasParquesoutrosjan23_11,
                 popuplayertitle: "Equip. Pub. Praças/Parques/outros (jan/23)",
                 interactive: true,
-                title: '<img src="styles/legend/EquipPubPraasParquesoutrosjan23_10.png" /> Equip. Pub. Praças/Parques/outros (jan/23)'
+                title: '<img src="styles/legend/EquipPubPraasParquesoutrosjan23_11.png" /> Equip. Pub. Praças/Parques/outros (jan/23)'
             });
-var format_EquipPubCulturaisout21_11 = new ol.format.GeoJSON();
-var features_EquipPubCulturaisout21_11 = format_EquipPubCulturaisout21_11.readFeatures(json_EquipPubCulturaisout21_11, 
+var format_EquipPubCulturaisout21_12 = new ol.format.GeoJSON();
+var features_EquipPubCulturaisout21_12 = format_EquipPubCulturaisout21_12.readFeatures(json_EquipPubCulturaisout21_12, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_EquipPubCulturaisout21_11 = new ol.source.Vector({
+var jsonSource_EquipPubCulturaisout21_12 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_EquipPubCulturaisout21_11.addFeatures(features_EquipPubCulturaisout21_11);
-var lyr_EquipPubCulturaisout21_11 = new ol.layer.Vector({
+jsonSource_EquipPubCulturaisout21_12.addFeatures(features_EquipPubCulturaisout21_12);
+var lyr_EquipPubCulturaisout21_12 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_EquipPubCulturaisout21_11,
+                source:jsonSource_EquipPubCulturaisout21_12,
 maxResolution:7.00111653806549,
  minResolution:0.28004466152261964,
 
-                style: style_EquipPubCulturaisout21_11,
+                style: style_EquipPubCulturaisout21_12,
                 popuplayertitle: "Equip. Pub. Culturais (out/21)",
                 interactive: true,
-                title: '<img src="styles/legend/EquipPubCulturaisout21_11.png" /> Equip. Pub. Culturais (out/21)'
+                title: '<img src="styles/legend/EquipPubCulturaisout21_12.png" /> Equip. Pub. Culturais (out/21)'
             });
-var format_EquipEducaoout23_12 = new ol.format.GeoJSON();
-var features_EquipEducaoout23_12 = format_EquipEducaoout23_12.readFeatures(json_EquipEducaoout23_12, 
+var format_EquipEducaoout23_13 = new ol.format.GeoJSON();
+var features_EquipEducaoout23_13 = format_EquipEducaoout23_13.readFeatures(json_EquipEducaoout23_13, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_EquipEducaoout23_12 = new ol.source.Vector({
+var jsonSource_EquipEducaoout23_13 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_EquipEducaoout23_12.addFeatures(features_EquipEducaoout23_12);
-var lyr_EquipEducaoout23_12 = new ol.layer.Vector({
+jsonSource_EquipEducaoout23_13.addFeatures(features_EquipEducaoout23_13);
+var lyr_EquipEducaoout23_13 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_EquipEducaoout23_12,
+                source:jsonSource_EquipEducaoout23_13,
 maxResolution:14.00223307613098,
  minResolution:0.28004466152261964,
 
-                style: style_EquipEducaoout23_12,
+                style: style_EquipEducaoout23_13,
                 popuplayertitle: "Equip. Educação (out/23)",
                 interactive: true,
-                title: '<img src="styles/legend/EquipEducaoout23_12.png" /> Equip. Educação (out/23)'
+                title: '<img src="styles/legend/EquipEducaoout23_13.png" /> Equip. Educação (out/23)'
             });
-var format_EquipPubSadeout23_13 = new ol.format.GeoJSON();
-var features_EquipPubSadeout23_13 = format_EquipPubSadeout23_13.readFeatures(json_EquipPubSadeout23_13, 
+var format_EquipPubSadeout23_14 = new ol.format.GeoJSON();
+var features_EquipPubSadeout23_14 = format_EquipPubSadeout23_14.readFeatures(json_EquipPubSadeout23_14, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_EquipPubSadeout23_13 = new ol.source.Vector({
+var jsonSource_EquipPubSadeout23_14 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_EquipPubSadeout23_13.addFeatures(features_EquipPubSadeout23_13);
-var lyr_EquipPubSadeout23_13 = new ol.layer.Vector({
+jsonSource_EquipPubSadeout23_14.addFeatures(features_EquipPubSadeout23_14);
+var lyr_EquipPubSadeout23_14 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_EquipPubSadeout23_13,
+                source:jsonSource_EquipPubSadeout23_14,
 maxResolution:14.00223307613098,
  minResolution:0.28004466152261964,
 
-                style: style_EquipPubSadeout23_13,
+                style: style_EquipPubSadeout23_14,
                 popuplayertitle: "Equip. Pub. Saúde (out/23)",
                 interactive: true,
-                title: '<img src="styles/legend/EquipPubSadeout23_13.png" /> Equip. Pub. Saúde (out/23)'
-            });
-var format_ProjetosREFLORACamaari2023_14 = new ol.format.GeoJSON();
-var features_ProjetosREFLORACamaari2023_14 = format_ProjetosREFLORACamaari2023_14.readFeatures(json_ProjetosREFLORACamaari2023_14, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_ProjetosREFLORACamaari2023_14 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_ProjetosREFLORACamaari2023_14.addFeatures(features_ProjetosREFLORACamaari2023_14);
-var lyr_ProjetosREFLORACamaari2023_14 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_ProjetosREFLORACamaari2023_14,
-maxResolution:28.00446615226196,
- minResolution:0.28004466152261964,
-
-                style: style_ProjetosREFLORACamaari2023_14,
-                popuplayertitle: "Projetos REFLORA Camaçari (2023)",
-                interactive: true,
-                title: '<img src="styles/legend/ProjetosREFLORACamaari2023_14.png" /> Projetos REFLORA Camaçari (2023)'
+                title: '<img src="styles/legend/EquipPubSadeout23_14.png" /> Equip. Pub. Saúde (out/23)'
             });
 var format_PraasdePedgiorodestaduais_15 = new ol.format.GeoJSON();
 var features_PraasdePedgiorodestaduais_15 = format_PraasdePedgiorodestaduais_15.readFeatures(json_PraasdePedgiorodestaduais_15, 
@@ -444,17 +444,17 @@ var lyr_LimitesMunicpiosRMS2020_25 = new ol.layer.Vector({
                 title: '<img src="styles/legend/LimitesMunicpiosRMS2020_25.png" /> Limites Municípios/RMS (2020)'
             });
 
-lyr_OSMStandard_0.setVisible(false);lyr_WazeWorld_1.setVisible(true);lyr_GoogleSatellite_2.setVisible(true);lyr_GoogleTrafficonline_3.setVisible(false);lyr_GoogleLabels_4.setVisible(false);lyr_EsriBoundariesandPlaces_5.setVisible(true);lyr_RiosPerenesSEIBa25k_6.setVisible(false);lyr_Trecho_Massa_DaguaConder2010_7.setVisible(true);lyr_Massa_DaguaConder2010_8.setVisible(true);lyr_EquipPubEsportejan23_9.setVisible(false);lyr_EquipPubPraasParquesoutrosjan23_10.setVisible(false);lyr_EquipPubCulturaisout21_11.setVisible(false);lyr_EquipEducaoout23_12.setVisible(false);lyr_EquipPubSadeout23_13.setVisible(false);lyr_ProjetosREFLORACamaari2023_14.setVisible(true);lyr_PraasdePedgiorodestaduais_15.setVisible(true);lyr_LogradourosHierarquizao_16.setVisible(false);lyr_LogradourosOficializadoseouCepeados_17.setVisible(true);lyr_LinhaFrreaFCA_18.setVisible(true);lyr_EixosRodEstSEINFRABa2021_19.setVisible(false);lyr_PassarelasemRodovias_20.setVisible(true);lyr_Paradasdenibusemrodovias2022_21.setVisible(true);lyr_Localidadesdiversas2023_22.setVisible(true);lyr_Bairros_Enderecamento_2022_CNEFE_23.setVisible(false);lyr_DistritosMunicipais2020_24.setVisible(false);lyr_LimitesMunicpiosRMS2020_25.setVisible(true);
-var layersList = [lyr_OSMStandard_0,lyr_WazeWorld_1,lyr_GoogleSatellite_2,lyr_GoogleTrafficonline_3,lyr_GoogleLabels_4,lyr_EsriBoundariesandPlaces_5,lyr_RiosPerenesSEIBa25k_6,lyr_Trecho_Massa_DaguaConder2010_7,lyr_Massa_DaguaConder2010_8,lyr_EquipPubEsportejan23_9,lyr_EquipPubPraasParquesoutrosjan23_10,lyr_EquipPubCulturaisout21_11,lyr_EquipEducaoout23_12,lyr_EquipPubSadeout23_13,lyr_ProjetosREFLORACamaari2023_14,lyr_PraasdePedgiorodestaduais_15,lyr_LogradourosHierarquizao_16,lyr_LogradourosOficializadoseouCepeados_17,lyr_LinhaFrreaFCA_18,lyr_EixosRodEstSEINFRABa2021_19,lyr_PassarelasemRodovias_20,lyr_Paradasdenibusemrodovias2022_21,lyr_Localidadesdiversas2023_22,lyr_Bairros_Enderecamento_2022_CNEFE_23,lyr_DistritosMunicipais2020_24,lyr_LimitesMunicpiosRMS2020_25];
+lyr_OSMStandard_0.setVisible(false);lyr_WazeWorld_1.setVisible(true);lyr_GoogleSatellite_2.setVisible(true);lyr_GoogleTrafficonline_3.setVisible(false);lyr_GoogleLabels_4.setVisible(false);lyr_EsriBoundariesandPlaces_5.setVisible(true);lyr_RiosPerenesSEIBa25k_6.setVisible(false);lyr_Trecho_Massa_DaguaConder2010_7.setVisible(true);lyr_Massa_DaguaConder2010_8.setVisible(true);lyr_OutrosEquipInstitucionaiseComerciais2025_9.setVisible(false);lyr_EquipPubEsportejan23_10.setVisible(false);lyr_EquipPubPraasParquesoutrosjan23_11.setVisible(false);lyr_EquipPubCulturaisout21_12.setVisible(false);lyr_EquipEducaoout23_13.setVisible(false);lyr_EquipPubSadeout23_14.setVisible(false);lyr_PraasdePedgiorodestaduais_15.setVisible(true);lyr_LogradourosHierarquizao_16.setVisible(false);lyr_LogradourosOficializadoseouCepeados_17.setVisible(true);lyr_LinhaFrreaFCA_18.setVisible(true);lyr_EixosRodEstSEINFRABa2021_19.setVisible(false);lyr_PassarelasemRodovias_20.setVisible(true);lyr_Paradasdenibusemrodovias2022_21.setVisible(true);lyr_Localidadesdiversas2023_22.setVisible(true);lyr_Bairros_Enderecamento_2022_CNEFE_23.setVisible(false);lyr_DistritosMunicipais2020_24.setVisible(false);lyr_LimitesMunicpiosRMS2020_25.setVisible(true);
+var layersList = [lyr_OSMStandard_0,lyr_WazeWorld_1,lyr_GoogleSatellite_2,lyr_GoogleTrafficonline_3,lyr_GoogleLabels_4,lyr_EsriBoundariesandPlaces_5,lyr_RiosPerenesSEIBa25k_6,lyr_Trecho_Massa_DaguaConder2010_7,lyr_Massa_DaguaConder2010_8,lyr_OutrosEquipInstitucionaiseComerciais2025_9,lyr_EquipPubEsportejan23_10,lyr_EquipPubPraasParquesoutrosjan23_11,lyr_EquipPubCulturaisout21_12,lyr_EquipEducaoout23_13,lyr_EquipPubSadeout23_14,lyr_PraasdePedgiorodestaduais_15,lyr_LogradourosHierarquizao_16,lyr_LogradourosOficializadoseouCepeados_17,lyr_LinhaFrreaFCA_18,lyr_EixosRodEstSEINFRABa2021_19,lyr_PassarelasemRodovias_20,lyr_Paradasdenibusemrodovias2022_21,lyr_Localidadesdiversas2023_22,lyr_Bairros_Enderecamento_2022_CNEFE_23,lyr_DistritosMunicipais2020_24,lyr_LimitesMunicpiosRMS2020_25];
 lyr_RiosPerenesSEIBa25k_6.set('fieldAliases', {'Id': 'Id', 'nome': 'nome', 'regime': 'regime', });
 lyr_Trecho_Massa_DaguaConder2010_7.set('fieldAliases', {'FID_HID_Tr': 'FID_HID_Tr', 'nome': 'nome', 'geometriaA': 'geometriaA', 'regime': 'regime', 'nomeAbrev': 'nomeAbrev', 'ID_Trecho_': 'ID_Trecho_', 'tipoTrecho': 'tipoTrecho', 'salinidade': 'salinidade', 'FID_Articu': 'FID_Articu', 'OBJECTID_1': 'OBJECTID_1', 'MI': 'MI', 'Escala': 'Escala', 'Nome_Carta': 'Nome_Carta', 'Ano_Aquisi': 'Ano_Aquisi', 'Shape_Leng': 'Shape_Leng', 'BLOCO': 'BLOCO', 'Equidistan': 'Equidistan', 'Ano_Aqui_1': 'Ano_Aqui_1', 'Shape_Le_1': 'Shape_Le_1', 'Shape_Ar_1': 'Shape_Ar_1', 'SHAPE_Le_2': 'SHAPE_Le_2', 'SHAPE_Area': 'SHAPE_Area', });
 lyr_Massa_DaguaConder2010_8.set('fieldAliases', {'FID_HID_Ma': 'FID_HID_Ma', 'nome': 'nome', 'geometriaA': 'geometriaA', 'regime': 'regime', 'nomeAbrev': 'nomeAbrev', 'tipoMassaD': 'tipoMassaD', 'salinidade': 'salinidade', 'FID_Articu': 'FID_Articu', 'OBJECTID_1': 'OBJECTID_1', 'MI': 'MI', 'Escala': 'Escala', 'Nome_Carta': 'Nome_Carta', 'Ano_Aquisi': 'Ano_Aquisi', 'Shape_Leng': 'Shape_Leng', 'BLOCO': 'BLOCO', 'Equidistan': 'Equidistan', 'Ano_Aqui_1': 'Ano_Aqui_1', 'Shape_Le_1': 'Shape_Le_1', 'Shape_Ar_1': 'Shape_Ar_1', 'Shape_Le_2': 'Shape_Le_2', 'Shape_Area': 'Shape_Area', });
-lyr_EquipPubEsportejan23_9.set('fieldAliases', {'id': 'id', 'name': 'name', 'layer': 'layer', 'bairro': 'bairro', 'fonte': 'fonte', 'distrito': 'distrito', 'obs': 'obs', 'revisão': 'revisão', 'org.': 'org.', 'Macrozona': 'Macrozona', });
-lyr_EquipPubPraasParquesoutrosjan23_10.set('fieldAliases', {'id': 'id', 'name': 'name', 'bairro': 'bairro', 'fonte': 'fonte', 'layer_': 'layer_', 'distrito': 'distrito', 'observaç�': 'observaç�', 'revisão': 'revisão', 'estrutura': 'estrutura', 'org.': 'org.', 'Macrozona': 'Macrozona', });
-lyr_EquipPubCulturaisout21_11.set('fieldAliases', {'id': 'id', 'uso': 'uso', 'tipo': 'tipo', 'fonte': 'fonte', 'origem': 'origem', 'bairro': 'bairro', 'distrito': 'distrito', 'observaç�': 'observaç�', 'turno': 'turno', 'endereço': 'endereço', 'capacidade': 'capacidade', 'gestão': 'gestão', 'equipament': 'equipament', 'org.': 'org.', });
-lyr_EquipEducaoout23_12.set('fieldAliases', {'id': 'id', 'tipo': 'tipo', 'cod_inep': 'cod_inep', 'nome_compl': 'nome_compl', 'distrito': 'distrito', 'numero': 'numero', 'bairro': 'bairro', 'nome_anter': 'nome_anter', 'salas': 'salas', 'endereco': 'endereco', 'turmas_exi': 'turmas_exi', 'gestão': 'gestão', 'org.': 'org.', 'LINK': 'LINK', 'Obs.': 'Obs.', });
-lyr_EquipPubSadeout23_13.set('fieldAliases', {'id': 'id', 'name': 'name', 'descriptio': 'descriptio', 'tipo': 'tipo', 'fonte': 'fonte', 'bairro': 'bairro', 'distrito': 'distrito', 'cnes': 'cnes', 'n. gestão': 'n. gestão', 'org.': 'org.', 'LINK': 'LINK', 'LINK_2': 'LINK_2', });
-lyr_ProjetosREFLORACamaari2023_14.set('fieldAliases', {'Long': 'Long', 'Lat': 'Lat', 'Tipo': 'Tipo', 'Projeto': 'Projeto', });
+lyr_OutrosEquipInstitucionaiseComerciais2025_9.set('fieldAliases', {'id': 'id', 'nome': 'nome', 'tipo': 'tipo', 'setor': 'setor', 'bairro': 'bairro', 'distrito': 'distrito', 'situação': 'situação', 'gestão': 'gestão', 'observaç�': 'observaç�', 'fonte': 'fonte', 'revisão': 'revisão', });
+lyr_EquipPubEsportejan23_10.set('fieldAliases', {'id': 'id', 'name': 'name', 'layer': 'layer', 'bairro': 'bairro', 'fonte': 'fonte', 'distrito': 'distrito', 'obs': 'obs', 'revisão': 'revisão', 'org.': 'org.', 'Macrozona': 'Macrozona', });
+lyr_EquipPubPraasParquesoutrosjan23_11.set('fieldAliases', {'id': 'id', 'name': 'name', 'bairro': 'bairro', 'fonte': 'fonte', 'layer_': 'layer_', 'distrito': 'distrito', 'observaç�': 'observaç�', 'revisão': 'revisão', 'estrutura': 'estrutura', 'org.': 'org.', 'Macrozona': 'Macrozona', });
+lyr_EquipPubCulturaisout21_12.set('fieldAliases', {'id': 'id', 'uso': 'uso', 'tipo': 'tipo', 'fonte': 'fonte', 'origem': 'origem', 'bairro': 'bairro', 'distrito': 'distrito', 'observaç�': 'observaç�', 'turno': 'turno', 'endereço': 'endereço', 'capacidade': 'capacidade', 'gestão': 'gestão', 'equipament': 'equipament', 'org.': 'org.', });
+lyr_EquipEducaoout23_13.set('fieldAliases', {'id': 'id', 'tipo': 'tipo', 'cod_inep': 'cod_inep', 'nome_compl': 'nome_compl', 'distrito': 'distrito', 'numero': 'numero', 'bairro': 'bairro', 'nome_anter': 'nome_anter', 'salas': 'salas', 'endereco': 'endereco', 'turmas_exi': 'turmas_exi', 'gestão': 'gestão', 'org.': 'org.', 'LINK': 'LINK', 'Obs.': 'Obs.', });
+lyr_EquipPubSadeout23_14.set('fieldAliases', {'id': 'id', 'name': 'name', 'descriptio': 'descriptio', 'tipo': 'tipo', 'fonte': 'fonte', 'bairro': 'bairro', 'distrito': 'distrito', 'cnes': 'cnes', 'n. gestão': 'n. gestão', 'org.': 'org.', 'LINK': 'LINK', 'LINK_2': 'LINK_2', });
 lyr_PraasdePedgiorodestaduais_15.set('fieldAliases', {'id': 'id', 'nome': 'nome', 'tipo': 'tipo', 'bairro': 'bairro', 'distrito': 'distrito', 'base': 'base', 'fonte': 'fonte', });
 lyr_LogradourosHierarquizao_16.set('fieldAliases', {'id': 'id', 'codlog_': 'codlog_', 'logradour_': 'logradour_', 'parcelame_': 'parcelame_', 'bairro_': 'bairro_', 'distrito_': 'distrito_', 'cep_': 'cep_', 'obs_1': 'obs_1', 'obs_2': 'obs_2', 'catalogo_': 'catalogo_', 'webmap': 'webmap', 'compriment': 'compriment', 'MAPA': 'MAPA', });
 lyr_LogradourosOficializadoseouCepeados_17.set('fieldAliases', {'id': 'id', 'codlog_': 'codlog_', 'logradour_': 'logradour_', 'parcelame_': 'parcelame_', 'bairro_': 'bairro_', 'distrito_': 'distrito_', 'cep_': 'cep_', 'obs_1': 'obs_1', 'obs_2': 'obs_2', 'catalogo_': 'catalogo_', 'webmap': 'webmap', 'compriment': 'compriment', 'MAPA': 'MAPA', });
@@ -469,12 +469,12 @@ lyr_LimitesMunicpiosRMS2020_25.set('fieldAliases', {'CD_MUN': 'CD_MUN', 'NM_MUN'
 lyr_RiosPerenesSEIBa25k_6.set('fieldImages', {'Id': 'TextEdit', 'nome': 'TextEdit', 'regime': 'TextEdit', });
 lyr_Trecho_Massa_DaguaConder2010_7.set('fieldImages', {'FID_HID_Tr': 'Range', 'nome': 'TextEdit', 'geometriaA': 'Range', 'regime': 'Range', 'nomeAbrev': 'TextEdit', 'ID_Trecho_': 'Range', 'tipoTrecho': 'Range', 'salinidade': 'Range', 'FID_Articu': 'Range', 'OBJECTID_1': 'Range', 'MI': 'TextEdit', 'Escala': 'Range', 'Nome_Carta': 'TextEdit', 'Ano_Aquisi': 'TextEdit', 'Shape_Leng': 'TextEdit', 'BLOCO': 'TextEdit', 'Equidistan': 'Range', 'Ano_Aqui_1': 'Range', 'Shape_Le_1': 'TextEdit', 'Shape_Ar_1': 'TextEdit', 'SHAPE_Le_2': 'TextEdit', 'SHAPE_Area': 'TextEdit', });
 lyr_Massa_DaguaConder2010_8.set('fieldImages', {'FID_HID_Ma': 'Range', 'nome': 'TextEdit', 'geometriaA': 'Range', 'regime': 'Range', 'nomeAbrev': 'TextEdit', 'tipoMassaD': 'Range', 'salinidade': 'Range', 'FID_Articu': 'Range', 'OBJECTID_1': 'Range', 'MI': 'TextEdit', 'Escala': 'Range', 'Nome_Carta': 'TextEdit', 'Ano_Aquisi': 'TextEdit', 'Shape_Leng': 'TextEdit', 'BLOCO': 'TextEdit', 'Equidistan': 'Range', 'Ano_Aqui_1': 'Range', 'Shape_Le_1': 'TextEdit', 'Shape_Ar_1': 'TextEdit', 'Shape_Le_2': 'TextEdit', 'Shape_Area': 'TextEdit', });
-lyr_EquipPubEsportejan23_9.set('fieldImages', {'id': 'Range', 'name': 'TextEdit', 'layer': 'TextEdit', 'bairro': 'TextEdit', 'fonte': 'TextEdit', 'distrito': 'TextEdit', 'obs': 'TextEdit', 'revisão': 'TextEdit', 'org.': 'TextEdit', 'Macrozona': 'TextEdit', });
-lyr_EquipPubPraasParquesoutrosjan23_10.set('fieldImages', {'id': 'Range', 'name': 'TextEdit', 'bairro': 'TextEdit', 'fonte': 'TextEdit', 'layer_': 'TextEdit', 'distrito': 'TextEdit', 'observaç�': 'TextEdit', 'revisão': 'TextEdit', 'estrutura': 'TextEdit', 'org.': 'TextEdit', 'Macrozona': 'TextEdit', });
-lyr_EquipPubCulturaisout21_11.set('fieldImages', {'id': 'TextEdit', 'uso': 'TextEdit', 'tipo': 'TextEdit', 'fonte': 'TextEdit', 'origem': 'TextEdit', 'bairro': 'TextEdit', 'distrito': 'TextEdit', 'observaç�': 'TextEdit', 'turno': 'TextEdit', 'endereço': 'TextEdit', 'capacidade': 'TextEdit', 'gestão': 'TextEdit', 'equipament': 'TextEdit', 'org.': 'TextEdit', });
-lyr_EquipEducaoout23_12.set('fieldImages', {'id': 'Range', 'tipo': 'TextEdit', 'cod_inep': 'TextEdit', 'nome_compl': 'TextEdit', 'distrito': 'TextEdit', 'numero': 'TextEdit', 'bairro': 'TextEdit', 'nome_anter': 'TextEdit', 'salas': 'TextEdit', 'endereco': 'TextEdit', 'turmas_exi': 'TextEdit', 'gestão': 'TextEdit', 'org.': 'TextEdit', 'LINK': '', 'Obs.': '', });
-lyr_EquipPubSadeout23_13.set('fieldImages', {'id': 'Range', 'name': 'TextEdit', 'descriptio': 'TextEdit', 'tipo': 'TextEdit', 'fonte': 'TextEdit', 'bairro': 'TextEdit', 'distrito': 'TextEdit', 'cnes': 'TextEdit', 'n. gestão': 'TextEdit', 'org.': 'TextEdit', 'LINK': '', 'LINK_2': '', });
-lyr_ProjetosREFLORACamaari2023_14.set('fieldImages', {'Long': 'Range', 'Lat': 'Range', 'Tipo': 'TextEdit', 'Projeto': 'TextEdit', });
+lyr_OutrosEquipInstitucionaiseComerciais2025_9.set('fieldImages', {'id': 'TextEdit', 'nome': 'TextEdit', 'tipo': 'TextEdit', 'setor': 'TextEdit', 'bairro': 'TextEdit', 'distrito': 'TextEdit', 'situação': 'TextEdit', 'gestão': 'TextEdit', 'observaç�': 'TextEdit', 'fonte': 'TextEdit', 'revisão': 'TextEdit', });
+lyr_EquipPubEsportejan23_10.set('fieldImages', {'id': 'Range', 'name': 'TextEdit', 'layer': 'TextEdit', 'bairro': 'TextEdit', 'fonte': 'TextEdit', 'distrito': 'TextEdit', 'obs': 'TextEdit', 'revisão': 'TextEdit', 'org.': 'TextEdit', 'Macrozona': 'TextEdit', });
+lyr_EquipPubPraasParquesoutrosjan23_11.set('fieldImages', {'id': 'Range', 'name': 'TextEdit', 'bairro': 'TextEdit', 'fonte': 'TextEdit', 'layer_': 'TextEdit', 'distrito': 'TextEdit', 'observaç�': 'TextEdit', 'revisão': 'TextEdit', 'estrutura': 'TextEdit', 'org.': 'TextEdit', 'Macrozona': 'TextEdit', });
+lyr_EquipPubCulturaisout21_12.set('fieldImages', {'id': 'TextEdit', 'uso': 'TextEdit', 'tipo': 'TextEdit', 'fonte': 'TextEdit', 'origem': 'TextEdit', 'bairro': 'TextEdit', 'distrito': 'TextEdit', 'observaç�': 'TextEdit', 'turno': 'TextEdit', 'endereço': 'TextEdit', 'capacidade': 'TextEdit', 'gestão': 'TextEdit', 'equipament': 'TextEdit', 'org.': 'TextEdit', });
+lyr_EquipEducaoout23_13.set('fieldImages', {'id': 'Range', 'tipo': 'TextEdit', 'cod_inep': 'TextEdit', 'nome_compl': 'TextEdit', 'distrito': 'TextEdit', 'numero': 'TextEdit', 'bairro': 'TextEdit', 'nome_anter': 'TextEdit', 'salas': 'TextEdit', 'endereco': 'TextEdit', 'turmas_exi': 'TextEdit', 'gestão': 'TextEdit', 'org.': 'TextEdit', 'LINK': '', 'Obs.': '', });
+lyr_EquipPubSadeout23_14.set('fieldImages', {'id': 'Range', 'name': 'TextEdit', 'descriptio': 'TextEdit', 'tipo': 'TextEdit', 'fonte': 'TextEdit', 'bairro': 'TextEdit', 'distrito': 'TextEdit', 'cnes': 'TextEdit', 'n. gestão': 'TextEdit', 'org.': 'TextEdit', 'LINK': '', 'LINK_2': '', });
 lyr_PraasdePedgiorodestaduais_15.set('fieldImages', {'id': 'TextEdit', 'nome': 'TextEdit', 'tipo': 'TextEdit', 'bairro': 'TextEdit', 'distrito': 'TextEdit', 'base': 'TextEdit', 'fonte': 'TextEdit', });
 lyr_LogradourosHierarquizao_16.set('fieldImages', {'id': 'TextEdit', 'codlog_': 'TextEdit', 'logradour_': 'TextEdit', 'parcelame_': 'TextEdit', 'bairro_': 'TextEdit', 'distrito_': 'TextEdit', 'cep_': 'TextEdit', 'obs_1': 'TextEdit', 'obs_2': 'TextEdit', 'catalogo_': 'TextEdit', 'webmap': 'TextEdit', 'compriment': 'TextEdit', 'MAPA': 'TextEdit', });
 lyr_LogradourosOficializadoseouCepeados_17.set('fieldImages', {'id': 'TextEdit', 'codlog_': 'TextEdit', 'logradour_': 'TextEdit', 'parcelame_': 'TextEdit', 'bairro_': 'TextEdit', 'distrito_': 'TextEdit', 'cep_': 'TextEdit', 'obs_1': 'TextEdit', 'obs_2': 'TextEdit', 'catalogo_': '', 'webmap': 'TextEdit', 'compriment': 'TextEdit', 'MAPA': '', });
@@ -489,12 +489,12 @@ lyr_LimitesMunicpiosRMS2020_25.set('fieldImages', {'CD_MUN': 'TextEdit', 'NM_MUN
 lyr_RiosPerenesSEIBa25k_6.set('fieldLabels', {'Id': 'inline label - always visible', 'nome': 'inline label - always visible', 'regime': 'inline label - always visible', });
 lyr_Trecho_Massa_DaguaConder2010_7.set('fieldLabels', {'FID_HID_Tr': 'inline label - always visible', 'nome': 'inline label - always visible', 'geometriaA': 'inline label - always visible', 'regime': 'inline label - always visible', 'nomeAbrev': 'inline label - always visible', 'ID_Trecho_': 'inline label - always visible', 'tipoTrecho': 'inline label - always visible', 'salinidade': 'inline label - always visible', 'FID_Articu': 'inline label - always visible', 'OBJECTID_1': 'inline label - always visible', 'MI': 'inline label - always visible', 'Escala': 'inline label - always visible', 'Nome_Carta': 'inline label - always visible', 'Ano_Aquisi': 'inline label - always visible', 'Shape_Leng': 'inline label - always visible', 'BLOCO': 'inline label - always visible', 'Equidistan': 'inline label - always visible', 'Ano_Aqui_1': 'inline label - always visible', 'Shape_Le_1': 'inline label - always visible', 'Shape_Ar_1': 'inline label - always visible', 'SHAPE_Le_2': 'inline label - always visible', 'SHAPE_Area': 'inline label - always visible', });
 lyr_Massa_DaguaConder2010_8.set('fieldLabels', {'FID_HID_Ma': 'inline label - always visible', 'nome': 'inline label - always visible', 'geometriaA': 'inline label - always visible', 'regime': 'inline label - always visible', 'nomeAbrev': 'inline label - always visible', 'tipoMassaD': 'inline label - always visible', 'salinidade': 'inline label - always visible', 'FID_Articu': 'inline label - always visible', 'OBJECTID_1': 'inline label - always visible', 'MI': 'inline label - always visible', 'Escala': 'inline label - always visible', 'Nome_Carta': 'inline label - always visible', 'Ano_Aquisi': 'inline label - always visible', 'Shape_Leng': 'inline label - always visible', 'BLOCO': 'inline label - always visible', 'Equidistan': 'inline label - always visible', 'Ano_Aqui_1': 'inline label - always visible', 'Shape_Le_1': 'inline label - always visible', 'Shape_Ar_1': 'inline label - always visible', 'Shape_Le_2': 'inline label - always visible', 'Shape_Area': 'inline label - always visible', });
-lyr_EquipPubEsportejan23_9.set('fieldLabels', {'id': 'inline label - always visible', 'name': 'inline label - always visible', 'layer': 'inline label - always visible', 'bairro': 'hidden field', 'fonte': 'hidden field', 'distrito': 'hidden field', 'obs': 'hidden field', 'revisão': 'hidden field', 'org.': 'hidden field', 'Macrozona': 'hidden field', });
-lyr_EquipPubPraasParquesoutrosjan23_10.set('fieldLabels', {'id': 'inline label - always visible', 'name': 'inline label - always visible', 'bairro': 'hidden field', 'fonte': 'hidden field', 'layer_': 'inline label - always visible', 'distrito': 'hidden field', 'observaç�': 'hidden field', 'revisão': 'hidden field', 'estrutura': 'hidden field', 'org.': 'hidden field', 'Macrozona': 'hidden field', });
-lyr_EquipPubCulturaisout21_11.set('fieldLabels', {'id': 'inline label - always visible', 'uso': 'inline label - always visible', 'tipo': 'inline label - always visible', 'fonte': 'hidden field', 'origem': 'hidden field', 'bairro': 'hidden field', 'distrito': 'hidden field', 'observaç�': 'hidden field', 'turno': 'hidden field', 'endereço': 'hidden field', 'capacidade': 'hidden field', 'gestão': 'inline label - always visible', 'equipament': 'inline label - always visible', 'org.': 'hidden field', });
-lyr_EquipEducaoout23_12.set('fieldLabels', {'id': 'inline label - always visible', 'tipo': 'inline label - always visible', 'cod_inep': 'hidden field', 'nome_compl': 'inline label - always visible', 'distrito': 'hidden field', 'numero': 'hidden field', 'bairro': 'hidden field', 'nome_anter': 'hidden field', 'salas': 'hidden field', 'endereco': 'hidden field', 'turmas_exi': 'hidden field', 'gestão': 'inline label - always visible', 'org.': 'hidden field', 'LINK': 'hidden field', 'Obs.': 'hidden field', });
-lyr_EquipPubSadeout23_13.set('fieldLabels', {'id': 'inline label - always visible', 'name': 'inline label - always visible', 'descriptio': 'inline label - always visible', 'tipo': 'inline label - always visible', 'fonte': 'hidden field', 'bairro': 'hidden field', 'distrito': 'hidden field', 'cnes': 'hidden field', 'n. gestão': 'inline label - always visible', 'org.': 'hidden field', 'LINK': 'hidden field', 'LINK_2': 'hidden field', });
-lyr_ProjetosREFLORACamaari2023_14.set('fieldLabels', {'Long': 'hidden field', 'Lat': 'hidden field', 'Tipo': 'inline label - always visible', 'Projeto': 'inline label - always visible', });
+lyr_OutrosEquipInstitucionaiseComerciais2025_9.set('fieldLabels', {'id': 'inline label - always visible', 'nome': 'no label', 'tipo': 'inline label - always visible', 'setor': 'no label', 'bairro': 'hidden field', 'distrito': 'hidden field', 'situação': 'no label', 'gestão': 'inline label - always visible', 'observaç�': 'hidden field', 'fonte': 'hidden field', 'revisão': 'no label', });
+lyr_EquipPubEsportejan23_10.set('fieldLabels', {'id': 'inline label - always visible', 'name': 'inline label - always visible', 'layer': 'inline label - always visible', 'bairro': 'hidden field', 'fonte': 'hidden field', 'distrito': 'hidden field', 'obs': 'hidden field', 'revisão': 'hidden field', 'org.': 'hidden field', 'Macrozona': 'hidden field', });
+lyr_EquipPubPraasParquesoutrosjan23_11.set('fieldLabels', {'id': 'inline label - always visible', 'name': 'inline label - always visible', 'bairro': 'hidden field', 'fonte': 'hidden field', 'layer_': 'inline label - always visible', 'distrito': 'hidden field', 'observaç�': 'hidden field', 'revisão': 'hidden field', 'estrutura': 'hidden field', 'org.': 'hidden field', 'Macrozona': 'hidden field', });
+lyr_EquipPubCulturaisout21_12.set('fieldLabels', {'id': 'inline label - always visible', 'uso': 'inline label - always visible', 'tipo': 'inline label - always visible', 'fonte': 'hidden field', 'origem': 'hidden field', 'bairro': 'hidden field', 'distrito': 'hidden field', 'observaç�': 'hidden field', 'turno': 'hidden field', 'endereço': 'hidden field', 'capacidade': 'hidden field', 'gestão': 'inline label - always visible', 'equipament': 'inline label - always visible', 'org.': 'hidden field', });
+lyr_EquipEducaoout23_13.set('fieldLabels', {'id': 'inline label - always visible', 'tipo': 'inline label - always visible', 'cod_inep': 'hidden field', 'nome_compl': 'inline label - always visible', 'distrito': 'hidden field', 'numero': 'hidden field', 'bairro': 'hidden field', 'nome_anter': 'hidden field', 'salas': 'hidden field', 'endereco': 'hidden field', 'turmas_exi': 'hidden field', 'gestão': 'inline label - always visible', 'org.': 'hidden field', 'LINK': 'hidden field', 'Obs.': 'hidden field', });
+lyr_EquipPubSadeout23_14.set('fieldLabels', {'id': 'inline label - always visible', 'name': 'inline label - always visible', 'descriptio': 'inline label - always visible', 'tipo': 'inline label - always visible', 'fonte': 'hidden field', 'bairro': 'hidden field', 'distrito': 'hidden field', 'cnes': 'hidden field', 'n. gestão': 'inline label - always visible', 'org.': 'hidden field', 'LINK': 'hidden field', 'LINK_2': 'hidden field', });
 lyr_PraasdePedgiorodestaduais_15.set('fieldLabels', {'id': 'no label', 'nome': 'no label', 'tipo': 'no label', 'bairro': 'no label', 'distrito': 'no label', 'base': 'no label', 'fonte': 'no label', });
 lyr_LogradourosHierarquizao_16.set('fieldLabels', {'id': 'hidden field', 'codlog_': 'inline label - always visible', 'logradour_': 'inline label - always visible', 'parcelame_': 'inline label - always visible', 'bairro_': 'inline label - always visible', 'distrito_': 'inline label - always visible', 'cep_': 'inline label - always visible', 'obs_1': 'inline label - always visible', 'obs_2': 'inline label - always visible', 'catalogo_': 'inline label - always visible', 'webmap': 'inline label - always visible', 'compriment': 'inline label - always visible', 'MAPA': 'inline label - always visible', });
 lyr_LogradourosOficializadoseouCepeados_17.set('fieldLabels', {'id': 'hidden field', 'codlog_': 'inline label - always visible', 'logradour_': 'inline label - always visible', 'parcelame_': 'hidden field', 'bairro_': 'inline label - always visible', 'distrito_': 'inline label - always visible', 'cep_': 'inline label - always visible', 'obs_1': 'inline label - always visible', 'obs_2': 'inline label - always visible', 'catalogo_': 'inline label - always visible', 'webmap': 'inline label - always visible', 'compriment': 'inline label - always visible', 'MAPA': 'inline label - always visible', });
