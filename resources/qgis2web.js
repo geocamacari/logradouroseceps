@@ -9,7 +9,11 @@ var map = new ol.Map({
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-4265278.874466, -1426553.257847, -4262719.976368, -1425120.791115], map.getSize());
+map.getView().fit([-4265018.400878, -1426366.905434, -4262956.756932, -1425239.386509], map.getSize());
+
+////small screen definition
+    var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
+    var isSmallScreen = window.innerWidth < 650;
 
 ////controls container
 
@@ -65,7 +69,8 @@ closer.onclick = function() {
     return false;
 };
 var overlayPopup = new ol.Overlay({
-    element: container
+    element: container,
+	autoPan: true
 });
 map.addOverlay(overlayPopup)
     
@@ -114,7 +119,7 @@ var doHover = false;
 function createPopupField(currentFeature, currentFeatureKeys, layer) {
     var popupText = '';
     for (var i = 0; i < currentFeatureKeys.length; i++) {
-        if (currentFeatureKeys[i] != 'geometry') {
+        if (currentFeatureKeys[i] != 'geometry' && currentFeatureKeys[i] != 'layerObject' && currentFeatureKeys[i] != 'idO') {
             var popupField = '';
             if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "hidden field") {
                 continue;
@@ -158,18 +163,18 @@ function createPopupField(currentFeature, currentFeatureKeys, layer) {
 
 var highlight;
 var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
-var onPointerMove = function(evt) {
+
+function onPointerMove(evt) {
     if (!doHover && !doHighlight) {
         return;
     }
     var pixel = map.getEventPixel(evt.originalEvent);
     var coord = evt.coordinate;
-    var popupField;
     var currentFeature;
     var currentLayer;
     var currentFeatureKeys;
     var clusteredFeatures;
-    var clusterLenght;
+    var clusterLength;
     var popupText = '<ul>';
     map.forEachFeatureAtPixel(pixel, function(feature, layer) {
         if (layer && feature instanceof ol.Feature && (layer.get("interactive") || layer.get("interactive") == undefined)) {
@@ -183,9 +188,8 @@ var onPointerMove = function(evt) {
             currentLayer = layer;
             clusteredFeatures = feature.get("features");
             if (clusteredFeatures) {
-				clusterLenght = clusteredFeatures.length;
+				clusterLength = clusteredFeatures.length;
 			}
-            var clusterFeature;
             if (typeof clusteredFeatures !== "undefined") {
                 if (doPopup) {
                     for(var n=0; n<clusteredFeatures.length; n++) {
@@ -213,8 +217,8 @@ var onPointerMove = function(evt) {
     } else {
         popupText += '</ul>';
     }
-
-    if (doHighlight) {
+    
+	if (doHighlight) {
         if (currentFeature !== highlight) {
             if (highlight) {
                 featureOverlay.getSource().removeFeature(highlight);
@@ -234,7 +238,7 @@ var onPointerMove = function(evt) {
 					if (typeof clusteredFeatures == "undefined") {
 						radius = featureStyle.getImage().getRadius();
 					} else {
-						radius = parseFloat(featureStyle.split('radius')[1].split(' ')[1]) + clusterLenght;
+						radius = parseFloat(featureStyle.split('radius')[1].split(' ')[1]) + clusterLength;
 					}
 
                     highlightStyle = new ol.style.Style({
@@ -273,9 +277,9 @@ var onPointerMove = function(evt) {
 
     if (doHover) {
         if (popupText) {
+			content.innerHTML = popupText;
+            container.style.display = 'block';
             overlayPopup.setPosition(coord);
-            content.innerHTML = popupText;
-            container.style.display = 'block';        
         } else {
             container.style.display = 'none';
             closer.blur();
@@ -283,39 +287,55 @@ var onPointerMove = function(evt) {
     }
 };
 
-var onSingleClick = function(evt) {
-    if (doHover) {
+map.on('pointermove', onPointerMove);
+
+var popupContent = '';
+var popupCoord = null;
+var featuresPopupActive = false;
+
+function updatePopup() {
+    if (popupContent) {
+        content.innerHTML = popupContent;
+        container.style.display = 'block';
+		overlayPopup.setPosition(popupCoord);
+    } else {
+        container.style.display = 'none';
+        closer.blur();
+    }
+} 
+
+function onSingleClickFeatures(evt) {
+    if (doHover || sketch) {
         return;
     }
-    if (sketch) {
-        return;
+    if (!featuresPopupActive) {
+        featuresPopupActive = true;
     }
     var pixel = map.getEventPixel(evt.originalEvent);
     var coord = evt.coordinate;
-    var popupField;
     var currentFeature;
     var currentFeatureKeys;
     var clusteredFeatures;
     var popupText = '<ul>';
+    
     map.forEachFeatureAtPixel(pixel, function(feature, layer) {
-        if (layer && feature instanceof ol.Feature && (layer.get("interactive") || layer.get("interactive") == undefined)) {
+        if (layer && feature instanceof ol.Feature && (layer.get("interactive") || layer.get("interactive") === undefined)) {
             var doPopup = false;
-            for (k in layer.get('fieldImages')) {
-                if (layer.get('fieldImages')[k] != "Hidden") {
+            for (var k in layer.get('fieldImages')) {
+                if (layer.get('fieldImages')[k] !== "Hidden") {
                     doPopup = true;
                 }
             }
             currentFeature = feature;
             clusteredFeatures = feature.get("features");
-            var clusterFeature;
             if (typeof clusteredFeatures !== "undefined") {
                 if (doPopup) {
-                    for(var n=0; n<clusteredFeatures.length; n++) {
+                    for(var n = 0; n < clusteredFeatures.length; n++) {
                         currentFeature = clusteredFeatures[n];
                         currentFeatureKeys = currentFeature.getKeys();
-                        popupText += '<li><table>'
-						popupText += '<a>' + '<b>' + layer.get('popuplayertitle') + '</b>' + '</a>';
-						popupText += createPopupField(currentFeature, currentFeatureKeys, layer);
+                        popupText += '<li><table>';
+                        popupText += '<a><b>' + layer.get('popuplayertitle') + '</b></a>';
+                        popupText += createPopupField(currentFeature, currentFeatureKeys, layer);
                         popupText += '</table></li>';    
                     }
                 }
@@ -323,94 +343,100 @@ var onSingleClick = function(evt) {
                 currentFeatureKeys = currentFeature.getKeys();
                 if (doPopup) {
                     popupText += '<li><table>';
-					popupText += '<a>' + '<b>' + layer.get('popuplayertitle') + '</b>' + '</a>';
-					popupText += createPopupField(currentFeature, currentFeatureKeys, layer);
+                    popupText += '<a><b>' + layer.get('popuplayertitle') + '</b></a>';
+                    popupText += createPopupField(currentFeature, currentFeatureKeys, layer);
                     popupText += '</table>';
                 }
             }
         }
     });
-    if (popupText == '<ul>') {
+    if (popupText === '<ul>') {
         popupText = '';
     } else {
         popupText += '</ul>';
     }
-    
-	var viewProjection = map.getView().getProjection();
-	var viewResolution = map.getView().getResolution();
+	
+	popupContent = popupText;
+    popupCoord = coord;
+    updatePopup();
+}
 
-	for (i = 0; i < wms_layers.length; i++) {
-		if (wms_layers[i][1] && wms_layers[i][0].getVisible()) {
-			overlayPopup.setPosition(coord);
-			container.style.display = 'block';
-			var url = wms_layers[i][0].getSource().getFeatureInfoUrl(
-					evt.coordinate, viewResolution, viewProjection, {
-					'INFO_FORMAT': 'text/html',
-				});
-			if (url) {
-				content.innerHTML = '';
-
-				var loadingIcon = document.createElement('div');
-				loadingIcon.className = 'lds-roller';
-
-				var imgElement = document.createElement('img');
-                imgElement.className = 'lds-roller-img';
-				imgElement.style.height = '25px';
-				imgElement.style.width = '25px';
-				loadingIcon.appendChild(imgElement);
-
-				container.appendChild(loadingIcon);
-
-				var timeoutPromise = new Promise((resolve, reject) => {
-						setTimeout(() => {
-							reject(new Error('Timeout exceeded'));
-						}, 5000); // 5000 millisecondi (5 secondi)
-					});
-
-				Promise.race([
-						fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(url)),
-						timeoutPromise
-					])
-				.then((response) => {
-					if (response.ok) {
-						return response.text();
-					} //else {						
-					//}
-				})
-				.then((html) => {
-					if (html.indexOf('<table') !== -1) {
-						overlayPopup.setPosition(coord);
-						content.innerHTML += html + '<p>' + '</p>';
-						container.style.display = 'block';
-					} // else {
-					// }
-				})
-				// .catch((error) => {
-				// })
-				.finally(() => {
-					var loaderIcon = document.querySelector('.lds-roller');
-					loaderIcon.remove();
-				});
-			}
-		}
-	}
-
-    if (popupText) {
-        overlayPopup.setPosition(coord);
-        content.innerHTML = popupText;
-        container.style.display = 'block';        
-    } else {
-        container.style.display = 'none';
-        closer.blur();
+function onSingleClickWMS(evt) {
+    if (doHover || sketch) {
+        return;
     }
-};
+    if (!featuresPopupActive) {
+        popupContent = '';
+    }
+    var coord = evt.coordinate;
+    var viewProjection = map.getView().getProjection();
+    var viewResolution = map.getView().getResolution();
 
-map.on('pointermove', function(evt) {
-    onPointerMove(evt);
-});
-map.on('singleclick', function(evt) {
-    onSingleClick(evt);
-});
+    for (var i = 0; i < wms_layers.length; i++) {
+        if (wms_layers[i][1] && wms_layers[i][0].getVisible()) {
+            var url = wms_layers[i][0].getSource().getFeatureInfoUrl(
+                evt.coordinate, viewResolution, viewProjection, {
+                    'INFO_FORMAT': 'text/html',
+                });
+            if (url) {
+                const wmsTitle = wms_layers[i][0].get('popuplayertitle');
+                var ldsRoller = '<div id="lds-roller"><img class="lds-roller-img" style="height: 25px; width: 25px;"></img></div>';
+
+                popupCoord = coord;
+                popupContent += ldsRoller;
+                updatePopup();
+
+                var timeoutPromise = new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        reject(new Error('Timeout exceeded'));
+                    }, 5000); // (5 second)
+                });
+
+                // Function to try fetch with different option
+                function tryFetch(urls) {
+                    if (urls.length === 0) {
+                        return Promise.reject(new Error('All fetch attempts failed'));
+                    }
+                    return fetch(urls[0])
+                        .then((response) => {
+                            if (response.ok) {
+                                return response.text();
+                            } else {
+                                throw new Error('Fetch failed');
+                            }
+                        })
+                        .catch(() => tryFetch(urls.slice(1))); // Try next URL
+                }
+
+                // List of URLs to try
+                // The first URL is the original, the second is the encoded version, and the third is the proxy
+                const urlsToTry = [
+                    url,
+                    encodeURIComponent(url),
+                    'https://api.allorigins.win/raw?url=' + encodeURIComponent(url)
+                ];
+
+                Promise.race([tryFetch(urlsToTry), timeoutPromise])
+                    .then((html) => {
+                        if (html.indexOf('<table') !== -1) {
+                            popupContent += '<a><b>' + wmsTitle + '</b></a>';
+                            popupContent += html + '<p></p>';
+                            updatePopup();
+                        }
+                    })
+                    .finally(() => {
+                        setTimeout(() => {
+                            var loaderIcon = document.querySelector('#lds-roller');
+                            if (loaderIcon) loaderIcon.remove();
+                        }, 500); // (0.5 second)
+                    });
+            }
+        }
+    }
+}
+
+map.on('singleclick', onSingleClickFeatures);
+map.on('singleclick', onSingleClickWMS);
 
 //get container
 var topLeftContainerDiv = document.getElementById('top-left-container')
@@ -633,7 +659,7 @@ var measureControl = (function (Control) {
     typeSelect.id = "type";
 
     var measurementOption = [
-        { value: "LineString", description: "Lenght" },
+        { value: "LineString", description: "Length" },
         { value: "Polygon", description: "Area" }
         ];
     measurementOption.forEach(function (option) {
@@ -704,7 +730,7 @@ typeSelect.onchange = function (e) {
   map.addInteraction(draw);		  
 };
 
-var style = new ol.style.Style({
+var measureLineStyle = new ol.style.Style({
   stroke: new ol.style.Stroke({ 
 	color: "rgba(0, 0, 255)", //blu
 	lineDash: [10, 10],
@@ -719,7 +745,7 @@ var style = new ol.style.Style({
   })
 });
 
-var style2 = new ol.style.Style({	  
+var measureLineStyle2 = new ol.style.Style({	  
 	stroke: new ol.style.Stroke({
 		color: "rgba(255, 255, 255)", 
 		lineDash: [10, 10],
@@ -753,7 +779,7 @@ var labelStyle = new ol.style.Style({
 var labelStyleCache = [];
 
 var styleFunction = function (feature, type) {
-  var styles = [style, style2];
+  var styles = [measureLineStyle, measureLineStyle2];
   var geometry = feature.getGeometry();
   var type = geometry.getType();
   var lineString;
@@ -945,63 +971,57 @@ if (elementToMove && parentElement) {
 var layerSwitcher = new ol.control.LayerSwitcher({
     tipLabel: "Layers",
     target: 'top-right-container'
-    });
+});
 map.addControl(layerSwitcher);
+    
 
 
 
 
 
 //attribution
-var attributionComplete = false;
-map.on("rendercomplete", function(evt) {
-	if (!attributionComplete) {
-		var attribution = document.getElementsByClassName('ol-attribution')[0];	
-		attribution.classList.remove('ol-collapsed');
-		var button = attribution.getElementsByTagName('button')[0];
-		if (button) {
-			button.parentNode.removeChild(button);
-		}
-		var attributionList = attribution.getElementsByTagName('ul')[0];
-		if (attributionList) {
-			var qgis2webAttribution = document.createElement('li');
-			qgis2webAttribution.innerHTML = '<a href="https://github.com/tomchadwin/qgis2web">qgis2web</a> &middot; ';
-			attributionList.appendChild(qgis2webAttribution);
+var bottomAttribution = new ol.control.Attribution({
+  collapsible: false,
+  collapsed: false,
+  className: 'bottom-attribution'
+});
+map.addControl(bottomAttribution);
 
-			var olAttribution = document.createElement('li');
-			olAttribution.innerHTML = '<a href="https://openlayers.org/">OpenLayers</a> &middot; ';
-			attributionList.appendChild(olAttribution);
-
-			var qgisAttribution = document.createElement('li');
-			qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS</a>';
-			attributionList.appendChild(qgisAttribution);
-		}
-	attributionComplete = true;
-	}
-})
-
+var attributionList = document.createElement('li');
+attributionList.innerHTML = `
+	<a href="https://github.com/qgis2web/qgis2web">qgis2web</a> &middot;
+	<a href="https://openlayers.org/">OpenLayers</a> &middot;
+	<a href="https://qgis.org/">QGIS</a>	
+`;
+var bottomAttributionUl = bottomAttribution.element.querySelector('ul');
+if (bottomAttributionUl) {
+  bottomAttribution.element.insertBefore(attributionList, bottomAttributionUl);
+}
 
 
 // Disable "popup on hover" or "highlight on hover" if ol-control mouseover
 var preDoHover = doHover;
 var preDoHighlight = doHighlight;
-if (doHover || doHighlight) {
-    var controlElements = document.getElementsByClassName('ol-control');
-    for (var i = 0; i < controlElements.length; i++) {
-        controlElements[i].addEventListener('mouseover', function() {
-            if (doHover) { doHover = false; }
-            if (doHighlight) { doHighlight = false; }
-        });
-        controlElements[i].addEventListener('mouseout', function() {
-            doHover = preDoHover;
-            doHighlight = preDoHighlight;
-        });
-    }
-}
+var isPopupAllActive = false;
+document.addEventListener('DOMContentLoaded', function() {
+	if (doHover || doHighlight) {
+		var controlElements = document.getElementsByClassName('ol-control');
+		for (var i = 0; i < controlElements.length; i++) {
+			controlElements[i].addEventListener('mouseover', function() { 
+				doHover = false;
+				doHighlight = false;
+			});
+			controlElements[i].addEventListener('mouseout', function() {
+				doHover = preDoHover;
+				if (isPopupAllActive) { return }
+				doHighlight = preDoHighlight;
+			});
+		}
+	}
+});
 
 
 //move controls inside containers, in order
-
     //zoom
     var zoomControl = document.getElementsByClassName('ol-zoom')[0];
     if (zoomControl) {
@@ -1034,7 +1054,7 @@ if (doHover || doHighlight) {
         bottomLeftContainerDiv.appendChild(scaleLineControl);
     }
     //attribution
-    var attributionControl = document.getElementsByClassName('ol-attribution')[0];
+    var attributionControl = document.getElementsByClassName('bottom-attribution')[0];
     if (attributionControl) {
         bottomRightContainerDiv.appendChild(attributionControl);
     }
