@@ -6,16 +6,16 @@ var style_PassarelasemRodovias_23 = function(feature, resolution){
         feature: feature,
         variables: {}
     };
-    var value = ""
-    var labelText = "";
-    size = 0;
+    
+    var labelText = ""; 
+    var value = feature.get("");
     var labelFont = "10.4px \'Arial Black\', sans-serif";
     var labelFill = "#000ad2";
     var bufferColor = "";
     var bufferWidth = 0;
     var textAlign = "left";
-    var offsetX = 8;
-    var offsetY = 3;
+    var offsetX = 0;
+    var offsetY = 0;
     var placement = 'line';
     if (feature.get("Numero") !== null) {
         labelText = String(feature.get("Numero"));

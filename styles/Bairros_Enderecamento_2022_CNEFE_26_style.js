@@ -6,16 +6,16 @@ var style_Bairros_Enderecamento_2022_CNEFE_26 = function(feature, resolution){
         feature: feature,
         variables: {}
     };
-    var value = ""
-    var labelText = "";
-    size = 0;
+    
+    var labelText = ""; 
+    var value = feature.get("");
     var labelFont = "15.600000000000001px \'Impact\', sans-serif";
     var labelFill = "#940007";
     var bufferColor = "";
     var bufferWidth = 0;
     var textAlign = "left";
-    var offsetX = 8;
-    var offsetY = 3;
+    var offsetX = 0;
+    var offsetY = 0;
     var placement = 'point';
     if (feature.get("bairros") !== null) {
         labelText = String(feature.get("bairros"));
