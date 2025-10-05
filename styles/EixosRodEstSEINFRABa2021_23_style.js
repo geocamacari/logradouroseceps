@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_SIGEFPrivado_CamacariMar2025_10 = function(feature, resolution){
+var style_EixosRodEstSEINFRABa2021_23 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -9,19 +9,19 @@ var style_SIGEFPrivado_CamacariMar2025_10 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "10.4px \'MS Shell Dlg 2\', sans-serif";
-    var labelFill = "#000000";
+    var labelFont = "11.700000000000001px \'Arial Black\', sans-serif";
+    var labelFill = "#900092";
     var bufferColor = "";
     var bufferWidth = 0;
     var textAlign = "left";
     var offsetX = 0;
     var offsetY = 0;
-    var placement = 'point';
-    if (feature.get("nome_proje") !== null) {
-        labelText = String(feature.get("nome_proje"));
+    var placement = 'line';
+    if (feature.get("Rodovia") !== null) {
+        labelText = String(feature.get("Rodovia"));
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(255,127,0,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.3679999999999999}),fill: new ol.style.Fill({color: 'rgba(255,127,0,0.2235294117647059)'}),
+        stroke: new ol.style.Stroke({color: 'rgba(115,0,192,0.611764705882353)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 4.4079999999999995}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
