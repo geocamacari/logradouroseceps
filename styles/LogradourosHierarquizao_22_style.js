@@ -3,8 +3,7 @@ var placement = 'point';
 function categories_LogradourosHierarquizao_22(feature, value, size, resolution, labelText,
                        labelFont, labelFill, bufferColor, bufferWidth,
                        placement) {
-                var valueStr = (value !== null && value !== undefined) ? value.toString() : 'default';
-                switch(valueStr) {case 'via expressa':
+                switch(value.toString()) {case 'via expressa':
                     return [ new ol.style.Style({
         stroke: new ol.style.Stroke({color: 'rgba(144,0,146,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 5.548}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
@@ -50,24 +49,24 @@ var style_LogradourosHierarquizao_22 = function(feature, resolution){
         feature: feature,
         variables: {}
     };
-    
-    var labelText = ""; 
     var value = feature.get("MAPA");
+    var labelText = "";
+    size = 0;
     var labelFont = "15.600000000000001px \'Impact\', sans-serif";
     var labelFill = "#000000";
     var bufferColor = "#ffffff";
-    var bufferWidth = 1.7999999999999998;
+    var bufferWidth = 0.6;
     var textAlign = "left";
-    var offsetX = 0;
-    var offsetY = 0;
+    var offsetX = 8;
+    var offsetY = 3;
     var placement = 'line';
     if (feature.get("logradour_") !== null) {
         labelText = String(feature.get("logradour_"));
     }
     
-    var style = categories_LogradourosHierarquizao_22(feature, value, size, resolution, labelText,
-                            labelFont, labelFill, bufferColor,
-                            bufferWidth, placement);
+var style = categories_LogradourosHierarquizao_22(feature, value, size, resolution, labelText,
+                          labelFont, labelFill, bufferColor,
+                          bufferWidth, placement);
 
     return style;
 };
