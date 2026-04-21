@@ -6,16 +6,16 @@ var style_LogradourosOficializadoseouCepeados_23 = function(feature, resolution)
         feature: feature,
         variables: {}
     };
-    var value = ""
-    var labelText = "";
-    size = 0;
+    
+    var labelText = ""; 
+    var value = feature.get("");
     var labelFont = "15.600000000000001px \'Impact\', sans-serif";
     var labelFill = "#000000";
     var bufferColor = "#ffffff";
-    var bufferWidth = 0.6;
+    var bufferWidth = 1.7999999999999998;
     var textAlign = "left";
-    var offsetX = 8;
-    var offsetY = 3;
+    var offsetX = 0;
+    var offsetY = 0;
     var placement = 'line';
     if (feature.get("logradour_") !== null) {
         labelText = String(feature.get("logradour_"));

@@ -6,16 +6,16 @@ var style_MacrozonaUrbana_SEDE_32 = function(feature, resolution){
         feature: feature,
         variables: {}
     };
-    var value = ""
-    var labelText = "";
-    size = 0;
+    
+    var labelText = ""; 
+    var value = feature.get("");
     var labelFont = "15.600000000000001px \'Arial\', sans-serif";
     var labelFill = "#000000";
     var bufferColor = "";
     var bufferWidth = 0;
     var textAlign = "left";
-    var offsetX = 8;
-    var offsetY = 3;
+    var offsetX = 0;
+    var offsetY = 0;
     var placement = 'point';
     if (feature.get("layer") !== null && resolution > 0 && resolution < 42) {
         labelText = String(feature.get("layer"));
