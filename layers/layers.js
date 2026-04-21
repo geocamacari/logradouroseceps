@@ -3,67 +3,61 @@ var wms_layers = [];
 
         var lyr_GoogleTerrain_0 = new ol.layer.Tile({
             'title': 'Google Terrain',
-            //'type': 'base',
             'opacity': 1.000000,
             
             
             source: new ol.source.XYZ({
-    attributions: ' &middot; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
+            attributions: '&nbsp;&middot; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
                 url: 'https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}'
             })
         });
 
         var lyr_ESRITopo_1 = new ol.layer.Tile({
             'title': 'ESRI Topo',
-            //'type': 'base',
             'opacity': 1.000000,
             
             
             source: new ol.source.XYZ({
-    attributions: ' ',
+            attributions: ' ',
                 url: 'https://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}'
             })
         });
 
         var lyr_WazeWorld_2 = new ol.layer.Tile({
             'title': 'Waze (World)',
-            //'type': 'base',
             'opacity': 1.000000,
             
             
             source: new ol.source.XYZ({
-    attributions: ' ',
+            attributions: ' ',
                 url: 'https://worldtiles3.waze.com/tiles/{z}/{x}/{y}.png'
             })
         });
 
         var lyr_OSMStandard_3 = new ol.layer.Tile({
             'title': 'OSM Standard',
-            //'type': 'base',
             'opacity': 1.000000,
             
             
             source: new ol.source.XYZ({
-    attributions: ' &middot; <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
+            attributions: '&nbsp;&middot; <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
                 url: 'http://tile.openstreetmap.org/{z}/{x}/{y}.png'
             })
         });
 
         var lyr_GoogleSatellite_4 = new ol.layer.Tile({
             'title': 'Google Satellite',
-            //'type': 'base',
             'opacity': 0.500000,
             
             
             source: new ol.source.XYZ({
-    attributions: ' &middot; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
+            attributions: '&nbsp;&middot; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
                 url: 'https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}'
             })
         });
 
         var lyr_GoogleTrafficonline_5 = new ol.layer.Tile({
             'title': 'Google Traffic online',
-            //'type': 'base',
             'opacity': 1.000000,
             
 maxResolution:140.0223307613098,
@@ -71,14 +65,13 @@ maxResolution:140.0223307613098,
             minResolution:0.28004466152261964,
 
             source: new ol.source.XYZ({
-    attributions: ' &middot; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
+            attributions: '&nbsp;&middot; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
                 url: 'https://mt1.google.com/vt?lyrs=h@159000000,traffic|seconds_into_week:-1&style=3&x={x}&y={y}&z={z}'
             })
         });
 
         var lyr_GoogleLabels_6 = new ol.layer.Tile({
             'title': 'Google Labels',
-            //'type': 'base',
             'opacity': 1.000000,
             
 maxResolution:140.0223307613098,
@@ -86,19 +79,18 @@ maxResolution:140.0223307613098,
             minResolution:0.14002233076130982,
 
             source: new ol.source.XYZ({
-    attributions: ' &middot; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
+            attributions: '&nbsp;&middot; <a href="https://www.google.at/permissions/geoguidelines/attr-guide.html">Map data ©2015 Google</a>',
                 url: 'https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}'
             })
         });
 
         var lyr_EsriBoundariesandPlaces_7 = new ol.layer.Tile({
             'title': 'Esri Boundaries and Places',
-            //'type': 'base',
             'opacity': 1.000000,
             
             
             source: new ol.source.XYZ({
-    attributions: ' ',
+            attributions: ' ',
                 url: 'http://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}'
             })
         });
@@ -116,7 +108,7 @@ maxResolution:28.00446615226196,
  minResolution:0.28004466152261964,
 
                 style: style_RiosPerenesSEIBa25k_8,
-                popuplayertitle: "Rios Perenes (SEI-Ba, 25k)",
+                popuplayertitle: 'Rios Perenes (SEI-Ba, 25k)',
                 interactive: true,
                 title: '<img src="styles/legend/RiosPerenesSEIBa25k_8.png" /> Rios Perenes (SEI-Ba, 25k)'
             });
@@ -134,8 +126,8 @@ maxResolution:28.00446615226196,
  minResolution:0.28004466152261964,
 
                 style: style_reasmidasVeredasPMSBCamaari_9,
-                popuplayertitle: "Áreas Úmidas/Veredas (PMSB - Camaçari)",
-                interactive: true,
+                popuplayertitle: 'Áreas Úmidas/Veredas (PMSB - Camaçari)',
+                interactive: false,
                 title: '<img src="styles/legend/reasmidasVeredasPMSBCamaari_9.png" /> Áreas Úmidas/Veredas (PMSB - Camaçari)'
             });
 var format_Trecho_Massa_DaguaConder2010_10 = new ol.format.GeoJSON();
@@ -152,7 +144,7 @@ maxResolution:140.0223307613098,
  minResolution:0.28004466152261964,
 
                 style: style_Trecho_Massa_DaguaConder2010_10,
-                popuplayertitle: "Trecho_Massa_Dagua (Conder 2010)",
+                popuplayertitle: 'Trecho_Massa_Dagua (Conder 2010)',
                 interactive: true,
                 title: '<img src="styles/legend/Trecho_Massa_DaguaConder2010_10.png" /> Trecho_Massa_Dagua (Conder 2010)'
             });
@@ -170,7 +162,7 @@ maxResolution:140.0223307613098,
  minResolution:0.28004466152261964,
 
                 style: style_Massa_DaguaConder2010_11,
-                popuplayertitle: "Massa_Dagua (Conder 2010)",
+                popuplayertitle: 'Massa_Dagua (Conder 2010)',
                 interactive: true,
                 title: '<img src="styles/legend/Massa_DaguaConder2010_11.png" /> Massa_Dagua (Conder 2010)'
             });
@@ -188,7 +180,7 @@ maxResolution:28.00446615226196,
  minResolution:0.28004466152261964,
 
                 style: style_SIGEFPrivado_CamacariMar2025_12,
-                popuplayertitle: "SIGEF Privado_Camacari (Mar./2025)",
+                popuplayertitle: 'SIGEF Privado_Camacari (Mar./2025)',
                 interactive: true,
                 title: '<img src="styles/legend/SIGEFPrivado_CamacariMar2025_12.png" /> SIGEF Privado_Camacari (Mar./2025)'
             });
@@ -206,7 +198,7 @@ maxResolution:7.00111653806549,
  minResolution:0.28004466152261964,
 
                 style: style_OutrosEquipInstitucionaiseComerciais2025_13,
-                popuplayertitle: "Outros Equip. Institucionais e Comerciais (2025)",
+                popuplayertitle: 'Outros Equip. Institucionais e Comerciais (2025)',
                 interactive: true,
                 title: '<img src="styles/legend/OutrosEquipInstitucionaiseComerciais2025_13.png" /> Outros Equip. Institucionais e Comerciais (2025)'
             });
@@ -224,7 +216,7 @@ maxResolution:7.00111653806549,
  minResolution:0.28004466152261964,
 
                 style: style_EquipPubEsportejan23_14,
-                popuplayertitle: "Equip. Pub. Esporte (jan/23)",
+                popuplayertitle: 'Equip. Pub. Esporte (jan/23)',
                 interactive: true,
                 title: '<img src="styles/legend/EquipPubEsportejan23_14.png" /> Equip. Pub. Esporte (jan/23)'
             });
@@ -242,7 +234,7 @@ maxResolution:7.00111653806549,
  minResolution:0.28004466152261964,
 
                 style: style_EquipPubPraasParquesoutrosjan23_15,
-                popuplayertitle: "Equip. Pub. Praças/Parques/outros (jan/23)",
+                popuplayertitle: 'Equip. Pub. Praças/Parques/outros (jan/23)',
                 interactive: true,
                 title: '<img src="styles/legend/EquipPubPraasParquesoutrosjan23_15.png" /> Equip. Pub. Praças/Parques/outros (jan/23)'
             });
@@ -260,7 +252,7 @@ maxResolution:7.00111653806549,
  minResolution:0.28004466152261964,
 
                 style: style_EquipPubCulturaisout21_16,
-                popuplayertitle: "Equip. Pub. Culturais (out/21)",
+                popuplayertitle: 'Equip. Pub. Culturais (out/21)',
                 interactive: true,
                 title: '<img src="styles/legend/EquipPubCulturaisout21_16.png" /> Equip. Pub. Culturais (out/21)'
             });
@@ -278,7 +270,7 @@ maxResolution:7.00111653806549,
  minResolution:0.28004466152261964,
 
                 style: style_EquipPubAssistSocialout23_17,
-                popuplayertitle: "Equip. Pub. Assist Social (out/23)",
+                popuplayertitle: 'Equip. Pub. Assist Social (out/23)',
                 interactive: true,
                 title: '<img src="styles/legend/EquipPubAssistSocialout23_17.png" /> Equip. Pub. Assist Social (out/23)'
             });
@@ -296,7 +288,7 @@ maxResolution:14.00223307613098,
  minResolution:0.28004466152261964,
 
                 style: style_EquipEducaoout23_18,
-                popuplayertitle: "Equip. Educação (out/23)",
+                popuplayertitle: 'Equip. Educação (out/23)',
                 interactive: true,
                 title: '<img src="styles/legend/EquipEducaoout23_18.png" /> Equip. Educação (out/23)'
             });
@@ -314,7 +306,7 @@ maxResolution:14.00223307613098,
  minResolution:0.28004466152261964,
 
                 style: style_EquipPubSadeset2025_19,
-                popuplayertitle: "Equip. Pub. Saúde (set./2025)",
+                popuplayertitle: 'Equip. Pub. Saúde (set./2025)',
                 interactive: true,
                 title: '<img src="styles/legend/EquipPubSadeset2025_19.png" /> Equip. Pub. Saúde (set./2025)'
             });
@@ -332,7 +324,7 @@ maxResolution:28.00446615226196,
  minResolution:0.28004466152261964,
 
                 style: style_ProjetosREFLORACamaari2023_20,
-                popuplayertitle: "Projetos REFLORA Camaçari (2023)",
+                popuplayertitle: 'Projetos REFLORA Camaçari (2023)',
                 interactive: true,
                 title: '<img src="styles/legend/ProjetosREFLORACamaari2023_20.png" /> Projetos REFLORA Camaçari (2023)'
             });
@@ -350,7 +342,7 @@ maxResolution:56.00893230452392,
  minResolution:0.28004466152261964,
 
                 style: style_PraasdePedgiorodestaduais_21,
-                popuplayertitle: "Praças de Pedágio (rod. estaduais)",
+                popuplayertitle: 'Praças de Pedágio (rod. estaduais)',
                 interactive: true,
                 title: '<img src="styles/legend/PraasdePedgiorodestaduais_21.png" /> Praças de Pedágio (rod. estaduais)'
             });
@@ -368,15 +360,14 @@ maxResolution:11.201786460904787,
  minResolution:0.14002233076130982,
 
                 style: style_LogradourosHierarquizao_22,
-                popuplayertitle: "Logradouros Hierarquização",
+                popuplayertitle: 'Logradouros Hierarquização',
                 interactive: true,
     title: 'Logradouros Hierarquização<br />\
     <img src="styles/legend/LogradourosHierarquizao_22_0.png" /> Rodovias / Vias Expressas<br />\
     <img src="styles/legend/LogradourosHierarquizao_22_1.png" /> Sist. Viário Urb. Principal (Arteriais)<br />\
     <img src="styles/legend/LogradourosHierarquizao_22_2.png" /> Sist. Viário Urb. Complementar (Coletoras)<br />\
     <img src="styles/legend/LogradourosHierarquizao_22_3.png" /> Outras vias urbanas (Vias Locais)<br />\
-    <img src="styles/legend/LogradourosHierarquizao_22_4.png" /> Estradas e vias rurais<br />'
-        });
+    <img src="styles/legend/LogradourosHierarquizao_22_4.png" /> Estradas e vias rurais<br />' });
 var format_LogradourosOficializadoseouCepeados_23 = new ol.format.GeoJSON();
 var features_LogradourosOficializadoseouCepeados_23 = format_LogradourosOficializadoseouCepeados_23.readFeatures(json_LogradourosOficializadoseouCepeados_23, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
@@ -391,7 +382,7 @@ maxResolution:11.201786460904787,
  minResolution:0.14002233076130982,
 
                 style: style_LogradourosOficializadoseouCepeados_23,
-                popuplayertitle: "Logradouros Oficializados e/ou Cepeados",
+                popuplayertitle: 'Logradouros Oficializados e/ou Cepeados',
                 interactive: true,
                 title: '<img src="styles/legend/LogradourosOficializadoseouCepeados_23.png" /> Logradouros Oficializados e/ou Cepeados'
             });
@@ -409,7 +400,7 @@ maxResolution:70.0111653806549,
  minResolution:0.28004466152261964,
 
                 style: style_LinhaFrreaFCA_24,
-                popuplayertitle: "Linha Férrea (FCA)",
+                popuplayertitle: 'Linha Férrea (FCA)',
                 interactive: true,
                 title: '<img src="styles/legend/LinhaFrreaFCA_24.png" /> Linha Férrea (FCA)'
             });
@@ -427,7 +418,7 @@ maxResolution:140.0223307613098,
  minResolution:0.28004466152261964,
 
                 style: style_EixosRodEstSEINFRABa2021_25,
-                popuplayertitle: "Eixos Rod. Est. (SEINFRA-Ba/2021)",
+                popuplayertitle: 'Eixos Rod. Est. (SEINFRA-Ba/2021)',
                 interactive: true,
                 title: '<img src="styles/legend/EixosRodEstSEINFRABa2021_25.png" /> Eixos Rod. Est. (SEINFRA-Ba/2021)'
             });
@@ -445,7 +436,7 @@ maxResolution:42.00669922839295,
  minResolution:0.28004466152261964,
 
                 style: style_PassarelasemRodovias_26,
-                popuplayertitle: "Passarelas em Rodovias",
+                popuplayertitle: 'Passarelas em Rodovias',
                 interactive: true,
                 title: '<img src="styles/legend/PassarelasemRodovias_26.png" /> Passarelas em Rodovias'
             });
@@ -463,8 +454,8 @@ maxResolution:21.003349614196473,
  minResolution:0.28004466152261964,
 
                 style: style_Paradasdenibusemrodovias2022_27,
-                popuplayertitle: "Paradas de ônibus em rodovias (2022)",
-                interactive: true,
+                popuplayertitle: 'Paradas de ônibus em rodovias (2022)',
+                interactive: false,
                 title: '<img src="styles/legend/Paradasdenibusemrodovias2022_27.png" /> Paradas de ônibus em rodovias (2022)'
             });
 var format_Pontos_IdentificaodiversosSEIBa_28 = new ol.format.GeoJSON();
@@ -473,8 +464,9 @@ var features_Pontos_IdentificaodiversosSEIBa_28 = format_Pontos_Identificaodiver
 var jsonSource_Pontos_IdentificaodiversosSEIBa_28 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Pontos_IdentificaodiversosSEIBa_28.addFeatures(features_Pontos_IdentificaodiversosSEIBa_28);cluster_Pontos_IdentificaodiversosSEIBa_28 = new ol.source.Cluster({
-  distance: 10,
+jsonSource_Pontos_IdentificaodiversosSEIBa_28.addFeatures(features_Pontos_IdentificaodiversosSEIBa_28);
+cluster_Pontos_IdentificaodiversosSEIBa_28 = new ol.source.Cluster({
+  distance: 30,
   source: jsonSource_Pontos_IdentificaodiversosSEIBa_28
 });
 var lyr_Pontos_IdentificaodiversosSEIBa_28 = new ol.layer.Vector({
@@ -484,7 +476,7 @@ maxResolution:8.401339845678589,
  minResolution:0.28004466152261964,
 
                 style: style_Pontos_IdentificaodiversosSEIBa_28,
-                popuplayertitle: "Pontos_Identificação diversos (SEI/Ba)",
+                popuplayertitle: 'Pontos_Identificação diversos (SEI/Ba)',
                 interactive: true,
                 title: '<img src="styles/legend/Pontos_IdentificaodiversosSEIBa_28.png" /> Pontos_Identificação diversos (SEI/Ba)'
             });
@@ -494,8 +486,9 @@ var features_PontosdeRefernciadiversosCPP2023_29 = format_PontosdeRefernciadiver
 var jsonSource_PontosdeRefernciadiversosCPP2023_29 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_PontosdeRefernciadiversosCPP2023_29.addFeatures(features_PontosdeRefernciadiversosCPP2023_29);cluster_PontosdeRefernciadiversosCPP2023_29 = new ol.source.Cluster({
-  distance: 10,
+jsonSource_PontosdeRefernciadiversosCPP2023_29.addFeatures(features_PontosdeRefernciadiversosCPP2023_29);
+cluster_PontosdeRefernciadiversosCPP2023_29 = new ol.source.Cluster({
+  distance: 30,
   source: jsonSource_PontosdeRefernciadiversosCPP2023_29
 });
 var lyr_PontosdeRefernciadiversosCPP2023_29 = new ol.layer.Vector({
@@ -505,7 +498,7 @@ maxResolution:8.401339845678589,
  minResolution:0.28004466152261964,
 
                 style: style_PontosdeRefernciadiversosCPP2023_29,
-                popuplayertitle: "Pontos de Referência diversos (CPP/2023)",
+                popuplayertitle: 'Pontos de Referência diversos (CPP/2023)',
                 interactive: true,
                 title: '<img src="styles/legend/PontosdeRefernciadiversosCPP2023_29.png" /> Pontos de Referência diversos (CPP/2023)'
             });
@@ -515,8 +508,9 @@ var features_Localidadesdiversas2023_30 = format_Localidadesdiversas2023_30.read
 var jsonSource_Localidadesdiversas2023_30 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_Localidadesdiversas2023_30.addFeatures(features_Localidadesdiversas2023_30);cluster_Localidadesdiversas2023_30 = new ol.source.Cluster({
-  distance: 10,
+jsonSource_Localidadesdiversas2023_30.addFeatures(features_Localidadesdiversas2023_30);
+cluster_Localidadesdiversas2023_30 = new ol.source.Cluster({
+  distance: 30,
   source: jsonSource_Localidadesdiversas2023_30
 });
 var lyr_Localidadesdiversas2023_30 = new ol.layer.Vector({
@@ -526,7 +520,7 @@ maxResolution:21.003349614196473,
  minResolution:0.5600893230452393,
 
                 style: style_Localidadesdiversas2023_30,
-                popuplayertitle: "Localidades diversas (2023)",
+                popuplayertitle: 'Localidades diversas (2023)',
                 interactive: true,
                 title: '<img src="styles/legend/Localidadesdiversas2023_30.png" /> Localidades diversas (2023)'
             });
@@ -544,7 +538,7 @@ maxResolution:84.0133984567859,
  minResolution:0.7001116538065492,
 
                 style: style_MacrozonaIndustrialPDDUS2023_31,
-                popuplayertitle: "Macrozona Industrial - PDDU-S 2023",
+                popuplayertitle: 'Macrozona Industrial - PDDU-S 2023',
                 interactive: true,
                 title: '<img src="styles/legend/MacrozonaIndustrialPDDUS2023_31.png" /> Macrozona Industrial - PDDU-S 2023'
             });
@@ -562,7 +556,7 @@ maxResolution:84.0133984567859,
  minResolution:0.7001116538065492,
 
                 style: style_MacrozonaUrbana_SEDE_32,
-                popuplayertitle: "Macrozona Urbana_SEDE",
+                popuplayertitle: 'Macrozona Urbana_SEDE',
                 interactive: true,
                 title: '<img src="styles/legend/MacrozonaUrbana_SEDE_32.png" /> Macrozona Urbana_SEDE'
             });
@@ -580,7 +574,7 @@ maxResolution:84.0133984567859,
  minResolution:1.4002233076130983,
 
                 style: style_Bairros_Enderecamento_2022_CNEFE_33,
-                popuplayertitle: "Bairros_Enderecamento_2022_CNEFE",
+                popuplayertitle: 'Bairros_Enderecamento_2022_CNEFE',
                 interactive: true,
                 title: '<img src="styles/legend/Bairros_Enderecamento_2022_CNEFE_33.png" /> Bairros_Enderecamento_2022_CNEFE'
             });
@@ -598,7 +592,7 @@ maxResolution:140.0223307613098,
  minResolution:2.8004466152261966,
 
                 style: style_DistritosMunicipais2020_34,
-                popuplayertitle: "Distritos Municipais (2020)",
+                popuplayertitle: 'Distritos Municipais (2020)',
                 interactive: true,
                 title: '<img src="styles/legend/DistritosMunicipais2020_34.png" /> Distritos Municipais (2020)'
             });
@@ -613,12 +607,12 @@ var lyr_LimitesMunicpiosRMS2020_35 = new ol.layer.Vector({
                 declutter: false,
                 source:jsonSource_LimitesMunicpiosRMS2020_35, 
                 style: style_LimitesMunicpiosRMS2020_35,
-                popuplayertitle: "Limites Municípios/RMS (2020)",
+                popuplayertitle: 'Limites Municípios/RMS (2020)',
                 interactive: true,
                 title: '<img src="styles/legend/LimitesMunicpiosRMS2020_35.png" /> Limites Municípios/RMS (2020)'
             });
 
-lyr_GoogleTerrain_0.setVisible(false);lyr_ESRITopo_1.setVisible(false);lyr_WazeWorld_2.setVisible(false);lyr_OSMStandard_3.setVisible(true);lyr_GoogleSatellite_4.setVisible(true);lyr_GoogleTrafficonline_5.setVisible(false);lyr_GoogleLabels_6.setVisible(false);lyr_EsriBoundariesandPlaces_7.setVisible(true);lyr_RiosPerenesSEIBa25k_8.setVisible(false);lyr_reasmidasVeredasPMSBCamaari_9.setVisible(false);lyr_Trecho_Massa_DaguaConder2010_10.setVisible(true);lyr_Massa_DaguaConder2010_11.setVisible(true);lyr_SIGEFPrivado_CamacariMar2025_12.setVisible(false);lyr_OutrosEquipInstitucionaiseComerciais2025_13.setVisible(false);lyr_EquipPubEsportejan23_14.setVisible(false);lyr_EquipPubPraasParquesoutrosjan23_15.setVisible(false);lyr_EquipPubCulturaisout21_16.setVisible(false);lyr_EquipPubAssistSocialout23_17.setVisible(false);lyr_EquipEducaoout23_18.setVisible(false);lyr_EquipPubSadeset2025_19.setVisible(false);lyr_ProjetosREFLORACamaari2023_20.setVisible(true);lyr_PraasdePedgiorodestaduais_21.setVisible(true);lyr_LogradourosHierarquizao_22.setVisible(false);lyr_LogradourosOficializadoseouCepeados_23.setVisible(true);lyr_LinhaFrreaFCA_24.setVisible(true);lyr_EixosRodEstSEINFRABa2021_25.setVisible(false);lyr_PassarelasemRodovias_26.setVisible(true);lyr_Paradasdenibusemrodovias2022_27.setVisible(true);lyr_Pontos_IdentificaodiversosSEIBa_28.setVisible(false);lyr_PontosdeRefernciadiversosCPP2023_29.setVisible(false);lyr_Localidadesdiversas2023_30.setVisible(true);lyr_MacrozonaIndustrialPDDUS2023_31.setVisible(false);lyr_MacrozonaUrbana_SEDE_32.setVisible(false);lyr_Bairros_Enderecamento_2022_CNEFE_33.setVisible(false);lyr_DistritosMunicipais2020_34.setVisible(false);lyr_LimitesMunicpiosRMS2020_35.setVisible(true);
+lyr_GoogleTerrain_0.setVisible(false);lyr_ESRITopo_1.setVisible(false);lyr_WazeWorld_2.setVisible(true);lyr_OSMStandard_3.setVisible(false);lyr_GoogleSatellite_4.setVisible(true);lyr_GoogleTrafficonline_5.setVisible(false);lyr_GoogleLabels_6.setVisible(false);lyr_EsriBoundariesandPlaces_7.setVisible(true);lyr_RiosPerenesSEIBa25k_8.setVisible(false);lyr_reasmidasVeredasPMSBCamaari_9.setVisible(false);lyr_Trecho_Massa_DaguaConder2010_10.setVisible(true);lyr_Massa_DaguaConder2010_11.setVisible(true);lyr_SIGEFPrivado_CamacariMar2025_12.setVisible(false);lyr_OutrosEquipInstitucionaiseComerciais2025_13.setVisible(false);lyr_EquipPubEsportejan23_14.setVisible(false);lyr_EquipPubPraasParquesoutrosjan23_15.setVisible(false);lyr_EquipPubCulturaisout21_16.setVisible(false);lyr_EquipPubAssistSocialout23_17.setVisible(false);lyr_EquipEducaoout23_18.setVisible(false);lyr_EquipPubSadeset2025_19.setVisible(false);lyr_ProjetosREFLORACamaari2023_20.setVisible(true);lyr_PraasdePedgiorodestaduais_21.setVisible(true);lyr_LogradourosHierarquizao_22.setVisible(false);lyr_LogradourosOficializadoseouCepeados_23.setVisible(true);lyr_LinhaFrreaFCA_24.setVisible(true);lyr_EixosRodEstSEINFRABa2021_25.setVisible(false);lyr_PassarelasemRodovias_26.setVisible(true);lyr_Paradasdenibusemrodovias2022_27.setVisible(true);lyr_Pontos_IdentificaodiversosSEIBa_28.setVisible(false);lyr_PontosdeRefernciadiversosCPP2023_29.setVisible(false);lyr_Localidadesdiversas2023_30.setVisible(true);lyr_MacrozonaIndustrialPDDUS2023_31.setVisible(false);lyr_MacrozonaUrbana_SEDE_32.setVisible(false);lyr_Bairros_Enderecamento_2022_CNEFE_33.setVisible(false);lyr_DistritosMunicipais2020_34.setVisible(false);lyr_LimitesMunicpiosRMS2020_35.setVisible(true);
 var layersList = [lyr_GoogleTerrain_0,lyr_ESRITopo_1,lyr_WazeWorld_2,lyr_OSMStandard_3,lyr_GoogleSatellite_4,lyr_GoogleTrafficonline_5,lyr_GoogleLabels_6,lyr_EsriBoundariesandPlaces_7,lyr_RiosPerenesSEIBa25k_8,lyr_reasmidasVeredasPMSBCamaari_9,lyr_Trecho_Massa_DaguaConder2010_10,lyr_Massa_DaguaConder2010_11,lyr_SIGEFPrivado_CamacariMar2025_12,lyr_OutrosEquipInstitucionaiseComerciais2025_13,lyr_EquipPubEsportejan23_14,lyr_EquipPubPraasParquesoutrosjan23_15,lyr_EquipPubCulturaisout21_16,lyr_EquipPubAssistSocialout23_17,lyr_EquipEducaoout23_18,lyr_EquipPubSadeset2025_19,lyr_ProjetosREFLORACamaari2023_20,lyr_PraasdePedgiorodestaduais_21,lyr_LogradourosHierarquizao_22,lyr_LogradourosOficializadoseouCepeados_23,lyr_LinhaFrreaFCA_24,lyr_EixosRodEstSEINFRABa2021_25,lyr_PassarelasemRodovias_26,lyr_Paradasdenibusemrodovias2022_27,lyr_Pontos_IdentificaodiversosSEIBa_28,lyr_PontosdeRefernciadiversosCPP2023_29,lyr_Localidadesdiversas2023_30,lyr_MacrozonaIndustrialPDDUS2023_31,lyr_MacrozonaUrbana_SEDE_32,lyr_Bairros_Enderecamento_2022_CNEFE_33,lyr_DistritosMunicipais2020_34,lyr_LimitesMunicpiosRMS2020_35];
 lyr_RiosPerenesSEIBa25k_8.set('fieldAliases', {'Id': 'Id', 'nome': 'nome', 'regime': 'regime', });
 lyr_reasmidasVeredasPMSBCamaari_9.set('fieldAliases', {'Id': 'Id', 'Descricao': 'Descricao', 'Coef__Defl': 'Coef__Defl', 'Categorias': 'Categorias', 'AREA': 'AREA', });
@@ -690,7 +684,7 @@ lyr_EquipEducaoout23_18.set('fieldLabels', {'id': 'inline label - always visible
 lyr_EquipPubSadeset2025_19.set('fieldLabels', {'Name': 'inline label - always visible', 'descriptio': 'inline label - always visible', 'Instalacao': 'inline label - always visible', 'fonte': 'inline label - always visible', 'bairro': 'inline label - always visible', 'distrito': 'inline label - always visible', 'gestao': 'inline label - always visible', 'Org.': 'inline label - always visible', });
 lyr_ProjetosREFLORACamaari2023_20.set('fieldLabels', {'Long': 'hidden field', 'Lat': 'hidden field', 'Tipo': 'inline label - always visible', 'Projeto': 'inline label - always visible', });
 lyr_PraasdePedgiorodestaduais_21.set('fieldLabels', {'id': 'inline label - always visible', 'nome': 'inline label - always visible', 'tipo': 'inline label - always visible', 'bairro': 'inline label - always visible', 'distrito': 'inline label - always visible', 'base': 'inline label - always visible', 'fonte': 'inline label - always visible', });
-lyr_LogradourosHierarquizao_22.set('fieldLabels', {'id': 'hidden field', 'codlog_': 'inline label - always visible', 'logradour_': 'inline label - always visible', 'parcelame_': 'inline label - always visible', 'bairro_': 'inline label - always visible', 'distrito_': 'inline label - always visible', 'cep_': 'inline label - always visible', 'obs_1': 'inline label - always visible', 'obs_2': 'inline label - always visible', 'webmap': 'inline label - always visible', 'class.2': 'inline label - always visible', 'compriment': 'inline label - always visible', 'MAPA': 'inline label - always visible', });
+lyr_LogradourosHierarquizao_22.set('fieldLabels', {'id': 'hidden field', 'codlog_': 'inline label - always visible', 'logradour_': 'inline label - always visible', 'parcelame_': 'inline label - always visible', 'bairro_': 'inline label - always visible', 'distrito_': 'inline label - always visible', 'cep_': 'inline label - always visible', 'obs_1': 'inline label - always visible', 'obs_2': 'inline label - always visible', 'webmap': 'inline label - always visible', 'class.2': 'hidden field', 'compriment': 'inline label - always visible', 'MAPA': 'inline label - always visible', });
 lyr_LogradourosOficializadoseouCepeados_23.set('fieldLabels', {'id': 'hidden field', 'codlog_': 'inline label - always visible', 'logradour_': 'inline label - always visible', 'parcelame_': 'inline label - always visible', 'bairro_': 'inline label - always visible', 'distrito_': 'inline label - always visible', 'cep_': 'inline label - always visible', 'obs_1': 'inline label - always visible', 'obs_2': 'inline label - always visible', 'webmap': 'hidden field', 'class.2': 'hidden field', 'compriment': 'inline label - always visible', 'MAPA': 'inline label - always visible', });
 lyr_LinhaFrreaFCA_24.set('fieldLabels', {'id': 'inline label - always visible', 'nome': 'inline label - always visible', 'nomeabrev': 'inline label - always visible', 'geometriaa': 'inline label - always visible', 'codtrechof': 'inline label - always visible', 'posicaorel': 'inline label - always visible', 'tipotrecho': 'inline label - always visible', 'bitola': 'inline label - always visible', 'eletrifica': 'inline label - always visible', 'nrlinhas': 'inline label - always visible', 'emarruamen': 'inline label - always visible', 'jurisdicao': 'inline label - always visible', 'administra': 'inline label - always visible', 'concession': 'inline label - always visible', 'operaciona': 'inline label - always visible', 'situacaofi': 'inline label - always visible', 'cargasupor': 'inline label - always visible', });
 lyr_EixosRodEstSEINFRABa2021_25.set('fieldLabels', {'Name': 'inline label - always visible', 'fid': 'inline label - always visible', 'Codigo SRE': 'inline label - always visible', 'UF': 'inline label - always visible', 'Rodovia': 'inline label - always visible', 'Local Iní': 'inline label - always visible', 'Km Inicial': 'inline label - always visible', 'Km Final': 'inline label - always visible', 'Extensão': 'inline label - always visible', 'Situação': 'inline label - always visible', 'Descriçã': 'inline label - always visible', 'Tipo de Re': 'inline label - always visible', 'Descriç_1': 'inline label - always visible', 'Coincide_3': 'inline label - always visible', 'Identifica': 'inline label - always visible', 'Extensã_1': 'inline label - always visible', 'Status': 'inline label - always visible', });
