@@ -1,10 +1,14 @@
 var createTextStyle = function(feature, resolution, labelText, labelFont,
                                labelFill, placement, bufferColor,
-                               bufferWidth) {
+                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat) {
 
     if (feature.hide || !labelText) {
         return; 
     } 
+
+    // Convert a literal "\n" (backslash + n) found in the attribute data
+    // into a real line break, so labels are rendered on multiple lines.
+    labelText = String(labelText).replace(/\\n/g, "\n");
 
     if (bufferWidth == 0) {
         var bufferStyle = null;
@@ -19,10 +23,12 @@ var createTextStyle = function(feature, resolution, labelText, labelFont,
         font: labelFont,
         text: labelText,
         textBaseline: "middle",
-        textAlign: "left",
-        offsetX: 8,
-        offsetY: 3,
+        textAlign: textAlign,
+        offsetX: offsetX,
+        offsetY: offsetY,
         placement: placement,
+        overflow: overflow,
+        repeat: repeat,
         maxAngle: 0,
         fill: new ol.style.Fill({
           color: labelFill

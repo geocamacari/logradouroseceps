@@ -4,15 +4,15 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-         maxZoom: 20, minZoom: 11
+        constrainResolution: false,
+        maxZoom: 20,
+        minZoom: 11,
+        
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-4264764.593249, -1426278.359285, -4263273.233807, -1425440.322195], map.getSize());
-
-//full zooms only
-map.getView().setProperties({constrainResolution: true});
+map.getView().fit([-4264729.532455, -1426278.265922, -4263308.295500, -1425440.417268], map.getSize());
 
 //change cursor
 function pointerOnFeature(evt) {
@@ -153,7 +153,10 @@ var doHover = false;
 function createPopupField(currentFeature, currentFeatureKeys, layer) {
     var popupText = '';
     for (var i = 0; i < currentFeatureKeys.length; i++) {
-        if (currentFeatureKeys[i] != 'geometry' && currentFeatureKeys[i] != 'layerObject' && currentFeatureKeys[i] != 'idO') {
+        if (currentFeatureKeys[i] != 'geometry' &&
+            currentFeatureKeys[i] != 'layerObject' &&
+            currentFeatureKeys[i] != 'idO' &&
+            currentFeatureKeys[i] != '_mvtLayer_') {
             var popupField = '';
             if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "hidden field") {
                 continue;
